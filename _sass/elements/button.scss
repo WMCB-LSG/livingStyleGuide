@@ -1,0 +1,34 @@
+//Buttons
+
+button, .button, a.button {
+	padding:$spacing-unit $spacing-unit*2;
+    background-color: white;
+	color:$primary-color;
+    text-decoration:none;
+	text-transform: uppercase;
+	font-weight:600;
+	@include border(1px, $primary-color);
+	@include border-radius(0.25rem);
+	max-width:10rem;
+	&.active{
+		@include border(0px, grey);
+		color:invert($font-color);
+		background-color:$primary-color;
+	}
+	&.inactive{
+		@include border(0px, grey);
+		color:$font-color;
+		background-color:#F3EFEE;
+	}
+}
+
+
+// button:hover,
+// .button:hover,
+// a.button:hover,
+// button:active,
+// .button:active,
+// a.button:active {
+// 	background:$primary-darker;
+// 	color:$font-color;
+// }

@@ -1,0 +1,56 @@
+// Use variables whenever a integer is normalised throughout your styling (i.e. 16px font size)
+// or for the branding colors in the style guide.
+// If you find whilst writing your code that you are repeating the same value, make a variable for it.
+// We want to code smarter to be more efficent.
+
+
+//Font Variables
+$base-font-family: "Open Sans", "Helvetica", Arial, sans-serif !default;
+$base-font-size: 16px !default;
+$base-font-weight: 400;
+$small-font-size: $base-font-size * 0.875;
+$base-line-height: 1;
+
+
+//Spacing and Padding
+$spacing-unit: 8px !default;
+$button-image-size: 25px;
+$date-picker-size: 35px;
+
+
+// Color Variables
+
+	//Primary Color
+	$primary-color:#9B9B9B;
+	$primary-dark:darken($primary-color, 15%); //Darkens Color by 15%
+	$primary-darker:darken($primary-color, 30%); //Darkens Color by 30%
+	$primary-light:lighten($primary-color, 15%); //Lightens Color by 15%
+	$primary-lighter:lighten($primary-color, 30%); //Lightens Color by 30%
+	// Secondary Colors
+	$secondary-charcoal:#323232;
+	$secondary-gold:#F29A38;
+	$secondary-orange:#F15C38;
+	$secondary-blue:#2A7698;
+	$secondary-white:#FFFFFF;
+	$secondary-black:#1A1A1A;
+	//Text Color
+	$font-color:rgba(0,0,0,0.87);
+
+// Z-index
+
+$Z1: 1000;
+// Device Sizes
+$large-screen:1024px;
+$small-screen:540px;
+
+// Social Colors
+$twitter: #09B0ED;
+$twitter-hover: darken($twitter, 25%);
+$facebook: #3D5A98;
+$facebook-hover: darken($facebook, 25%);
+$googleplus: #DD4C39;
+$googleplus-hover: darken($googleplus, 25%);
+$linkedin: #035A87;
+$linkedin-hover: darken($linkedin, 15%);
+$pinterest: #CB2127;
+$pinterest-hover: darken($pinterest, 25%);

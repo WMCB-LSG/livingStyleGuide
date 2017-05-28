@@ -3,17 +3,31 @@ layout: default
 ---
 
 <div class="home">
-<p>This is a repository for our Living Style Guide, Componenet Compendium and Roadmap</p>
+<p>This is a repository for our Living Style Guide, Component Compendium and Roadmap</p>
   <h1 class="page-heading">Components</h1>
 
   <ul class="post-list">
-    {% for post in site.posts %}
+      {% assign components = site.components | sort: 'status' %}
+        {% for page in components %}
       <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+          <div class="card-container">
+              <div class="card {{ page.status }}">
+                <div class="card-header">
+                  <div class="card-title">
+                    <h4 >{{ page.status }}</h4>
+                  </div><!--card-title-->
+                  <div class="card-action">
+                    <a href="{{ page.url }}" class="btn-view">view</a>
+                  </div><!--card-action-->
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
+                </div><!--card-header-->
+                <div class="card-content">
+
+                  <h3>{{ page.title }}</h3>
+                </div><!--card-content-->
+              </div><!--card-->
+
+              </div><!--card-container-->
       </li>
     {% endfor %}
   </ul>

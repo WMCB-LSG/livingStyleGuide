@@ -21,3 +21,8 @@ markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 permalink: :title
 sass:
     style: :compressed
+
+collections:
+  components:
+    output: true
+    permalink: /components/:title/

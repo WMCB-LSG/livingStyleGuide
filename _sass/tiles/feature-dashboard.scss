@@ -1,0 +1,7 @@
+.post-list{
+	@include flexbox;
+	@include flex-wrap(wrap);
+	li {
+		width:30%;
+	}
+}

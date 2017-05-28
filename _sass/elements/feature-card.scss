@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+*{
+  margin:0px;
+   padding:0px;
+  font-family: 'Open Sans', sans-serif;
+  font: 'Open Sans';
+  color:#283C63;
+}
+
+$live:#55E9BC;
+$indevelopment:lightblue;
+$pipeline:lightcoral;
+$proposed:lightgrey;
+$midnight:#283C63;
+$white:#ffffff;
+
+h3,h4{
+
+}
+
+h3{
+
+}
+
+h4{
+
+}
+
+.btn-view{
+  padding: 0.25rem 1rem;
+  border:2px solid $midnight;
+
+  text-decoration: none;
+
+
+  &:hover{
+    background-color:$midnight;
+    color: $white;
+    transition:  300ms ease-in-out;
+  }
+}
+
+.card-container{
+  display: flex;
+  flex-wrap: wrap;
+  width:100%;
+}
+
+.card{
+  flex-basis:100%;
+  margin: 2rem;
+
+
+  .card-header{
+    padding:1rem;
+     display: flex;
+    .card-title{
+      flex-order: 1;
+      flex-basis: 75%;
+
+        h4{
+      font-size:1em;
+          opacity: 0.75;
+
+
+    }
+    }
+    .card-action{
+      flex-order: 2;
+      flex-basis: 25;
+
+    }
+
+  }
+  .card-content{
+    padding:1rem;
+
+
+
+
+
+  }
+}
+
+
+.indevelopment{
+	background:$indevelopment;
+	.card-header {
+		background-color: darken($indevelopment, 15%);
+	}
+}
+
+
+.live{
+	background:$live;
+	.card-header {
+		background-color: darken($live, 15%);
+	}
+}
+
+
+.pipeline{
+	background:$pipeline;
+	.card-header {
+		background-color: darken($pipeline, 15%);
+	}
+}
+
+
+.proposed{
+	background:$proposed;
+	.card-header {
+		background-color: darken($proposed, 15%);
+	}
+}

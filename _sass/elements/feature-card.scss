@@ -9,8 +9,8 @@
 }
 
 $live:#55E9BC;
-$indevelopment:lightblue;
-$pipeline:lightcoral;
+$development:lightblue;
+$pipeline:lighten(#E8A80C, 15%);
 $proposed:lightgrey;
 $midnight:#283C63;
 $white:#ffffff;
@@ -84,10 +84,10 @@ h4{
 }
 
 
-.indevelopment{
-	background:$indevelopment;
+.development{
+	background:$development;
 	.card-header {
-		background-color: darken($indevelopment, 15%);
+		background-color: darken($development, 15%);
 	}
 }
 

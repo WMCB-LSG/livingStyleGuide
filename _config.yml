@@ -25,4 +25,4 @@ sass:
 collections:
   components:
     output: true
-    permalink: /components/:title/
+    permalink: /livingStyleGuide/components/:title/

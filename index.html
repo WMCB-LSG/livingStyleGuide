@@ -3,34 +3,6 @@ layout: default
 ---
 
 <div class="home">
-<p>This is a repository for our Living Style Guide, Component Compendium and Roadmap</p>
-  <h1 class="page-heading">Components</h1>
-
-  <ul class="post-list">
-      {% assign components = site.components | sort: 'status' %}
-        {% for page in components %}
-      <li>
-          <div class="card-container">
-              <div class="card {{ page.status }}">
-                <div class="card-header">
-                  <div class="card-title">
-                    <h4 >{{ page.status | capitalize }}</h4>
-                  </div><!--card-title-->
-                  <div class="card-action">
-                    <a href="{{ page.url }}" class="btn-view">view</a>
-                  </div><!--card-action-->
-
-                </div><!--card-header-->
-                <div class="card-content">
-
-                  <h3>{{ page.title }}</h3>
-                </div><!--card-content-->
-              </div><!--card-->
-
-              </div><!--card-container-->
-      </li>
-    {% endfor %}
-  </ul>
 
   <!-- <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p> -->
 

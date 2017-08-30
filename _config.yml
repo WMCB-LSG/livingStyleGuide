@@ -25,8 +25,8 @@ sass:
 collections:
   components:
     output: true
-    permalink: /lsg/components/:title/
+    permalink: /components/:title/
 
   client:
     output: true
-    permalink: /lsg/:title
+    permalink: /:title

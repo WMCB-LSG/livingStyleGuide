@@ -10,7 +10,7 @@ title: Living Style Guide
 email: josh@joshtregenza.com
 description: > # this means to ignore newlines until "baseurl:"
   Living Style Guide and Roadmap
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/livingStyleGuide" # the subpath of your site, e.g. /blog
 url: "https://wmcb-lsg.github.io" # the base hostname & protocol for your site
 twitter_username:
 github_username:
@@ -25,4 +25,8 @@ sass:
 collections:
   components:
     output: true
-    permalink: /livingStyleGuide/components/:title/
+    permalink: /lsg/components/:title/
+
+  client:
+    output: true
+    permalink: /lsg/:title

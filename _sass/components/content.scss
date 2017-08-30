@@ -1,0 +1,27 @@
+.row {
+    .row {
+        &.wmapp-content {
+            margin-bottom: 3rem;
+            max-width: $large-screen;
+            width: 100%;
+            margin: 0 auto;
+        }
+    }
+}
+
+section {
+    &.scroll-container {
+        > .row {
+            &.wmapp-builder-tile {
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+#cboxLoadedContent {
+    .wmapp-tile {
+        padding: 1.25rem;
+        box-sizing: border-box;
+    }
+}

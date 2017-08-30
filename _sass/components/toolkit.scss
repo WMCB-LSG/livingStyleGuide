@@ -1,0 +1,19 @@
+@import "breadcrumbs",
+        "search"
+;
+.wmapp-toolkit {
+	@include flexbox;
+	@include align-items(center);
+	@include justify-content(space-between);
+	@include flex-direction;
+    margin:1rem;
+    .wmapp-commands {
+		@include align-self(flex-end);
+		.button-group{
+			margin:0;
+			li {
+				margin-right:0;
+			}
+		}
+	}
+}

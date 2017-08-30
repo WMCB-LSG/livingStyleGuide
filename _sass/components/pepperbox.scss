@@ -1,0 +1,21 @@
+//Pepperbox Container
+.wmapp-pepper-box-container {
+    padding: 0.5rem;
+    overflow: auto;
+  }
+  .wmapp-pepper-box-container select {
+    height: 8rem;
+  }
+  .wmapp-pepper-box-container input[type="button"] {
+    width: 2rem;
+  }
+  span.notes {
+    color: rgb(153,153,153);
+    font-size: 0.75rem;
+    margin-left: 1.25rem;
+  }
+  .is-required {
+    color: $red;
+    font-weight: bold;
+    padding: 0.125rem;
+  }

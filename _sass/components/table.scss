@@ -1,0 +1,155 @@
+@media screen and (max-width: 26.25rem){ //Blaze It 
+    .wmapp-table {
+        overflow-x: auto;
+        display: block;
+
+        thead {
+            display: none;
+        }
+
+        tbody {
+            width: 100%;
+            display: block;
+
+            tr {
+                &:nth-of-type(2n+1) {
+                    background-color: inherit;
+                }
+            }
+
+            td {
+                &:before {
+                    content: attr(data-th);
+                    font-weight: bold;
+                }
+            }
+        }
+
+        td {
+            display: block;
+        }
+
+        tr {
+            width: 100%;
+            display: block;
+
+            td {
+                &:first-child {}
+            }
+        }
+    }
+}
+
+.wmapp-table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border:none;
+    tr {
+        display: table-row;
+        th {
+            border-bottom: 1px solid rgba(0,0,0,0.12);
+            position: relative;
+            vertical-align: bottom;
+            text-overflow: ellipsis;
+            font-weight: 700;
+            line-height: 24px;
+            letter-spacing: 0;
+            height: 48px;
+            font-size: 12px;
+            color: rgba(0, 0, 0, .54);
+            padding-bottom: 8px;
+            box-sizing: border-box;
+        } 
+    }
+    thead {
+        background:$grey-light;
+    }
+    ul.button-group {
+        display:inline;
+        li {
+            text-align: right;
+            margin: 0;
+            vertical-align: middle;
+        }
+    }
+    .wmapp-admin-commands {
+        text-align: right;
+    }
+    input[type="checkbox"] {
+        margin:0;
+    }
+    &-fixed {
+        width: 100%;
+        table-layout: fixed;  
+    }
+}
+
+th {
+    &.wmapp-admin-sort {
+        cursor: n-resize;
+        &:after {
+            margin: 0.625rem;
+            content: "";
+        }
+
+        &.sort_asc {
+            &:after {
+                font-family: FontAwesome;
+                margin: 0.625rem;
+                content: "\f077";
+            }
+        }
+
+        &.sort_desc {
+            &:after {
+                font-family: FontAwesome;
+                margin: 0.625rem;
+                content: "\f078";
+            }
+        }
+    }
+}
+
+.wmapp-image-collection-wrapper,
+.wmapp-resource-collection-wrapper {
+  border: 2px inset #ddd;
+  display: inline-block;
+  height: 25rem;
+  max-height: 34.375rem;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  padding-bottom: 0.625rem;
+  width: 49%;
+}
+.wmapp-admin-content {
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+  clear: both;
+  width: auto;
+}
+
+// Mobile Style 
+.wmapp-table {
+	@media (max-width: 40rem) {
+		&, thead, tbody, th, td, tr {
+			display: block;
+		}
+
+		thead {
+			tr {
+				display: none;
+			}
+		}
+
+		td {
+			&:before {
+				display: inline-block;
+				width: 40%;
+				content: "attr(data-th)";
+				font-weight: bold;
+				text-align: left !important;
+			}
+		}
+	}
+}

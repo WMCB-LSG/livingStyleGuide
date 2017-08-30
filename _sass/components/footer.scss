@@ -1,0 +1,76 @@
+.wmapp-footer {
+    padding: 0.625rem 0.625rem 0;
+    background: $grey-dark;
+    bottom: 0;
+    top: auto;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: $white;
+
+    a {
+        color: $grey;
+
+        &:visited {
+            color: $grey;
+        }
+    }
+
+    ul {
+        display: inline-block;
+        margin: 0;
+        font-size: 0.8rem;
+
+        li {
+            color: $white;
+            display: block;
+            float: left;
+            font-weight: 700;
+            text-transform: uppercase;
+
+            a {
+                color: $grey;
+                padding: 0.5rem;
+            }
+        }
+    }
+}
+
+.wmapp-footer-sitemap {
+    &:before {
+        font-family: FontAwesome;
+        content: "\f0e8";
+        font-size: 1.5rem;
+    }
+}
+
+.wmapp-footer-privacy {
+    &:before {
+        font-family: FontAwesome;
+        content: "\f05e";
+        font-size: 1.5rem;
+    }
+}
+
+.wmapp-footer-account {
+    &:before {
+        font-family: FontAwesome;
+        content: "\f02d";
+        font-size: 1.5rem;
+    }
+}
+
+.wmapp-footer-logout {
+    &:before {
+        font-family: FontAwesome;
+        content: "\f08b";
+        font-size: 1.5rem;
+    }
+}
+
+.wmapp-footer-login {
+    &:before {
+        font-family: FontAwesome;
+        content: "\f090";
+        font-size: 1.5rem;
+    }
+}

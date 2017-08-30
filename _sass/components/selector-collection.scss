@@ -1,0 +1,51 @@
+
+a.wmapp-app_selector-collection-item {
+	display: block;
+	width: 100%;
+	height: 100%;
+	padding-top: 7rem;
+	text-align: center;
+	color: rgb(86,86,86);
+	text-decoration: none;
+	background-position: center 0.25rem;
+	background-repeat: no-repeat;
+	background-size: 70%;
+
+	&:hover,
+	&:active,
+	&.activated {
+		color: $white !important;
+	}
+}
+
+.wmapp-app_selector-collection {
+	list-style-type: none;
+	padding: 0;
+	width: "calc(100% + 2.5rem)";
+	margin: -1.25rem 0 0 -1.25rem;
+	line-height: 0;
+
+	li {
+		display:inline-block;
+		@include border(1px,$grey);
+		width: 9rem;
+		height: 9rem;
+		margin: -1px 0 0 -1px;
+
+		&:nth-child(2n) a.wmapp-app_selector-collection-item {
+			&:hover,
+			&:active,
+			&.activated {
+				background-color: $accent;
+			}
+		}
+
+		&:nth-child(2n-1) a.wmapp-app_selector-collection-item {
+			&:hover,
+			&:active,
+			&.activated {
+				background-color: $secondary;
+			}
+		}
+	}
+}

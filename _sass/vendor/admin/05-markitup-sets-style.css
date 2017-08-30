@@ -1,0 +1,50 @@
+.markItUp .bold a {
+	background-image:url(/img/bold.png);
+}
+.markItUp .italic a {
+	background-image:url(/img/italic.png);
+}
+.markItUp .stroke a {
+	background-image:url(/img/stroke.png);
+}
+
+.markItUp .list-bullet a {
+	background-image:url(/img/list-bullet.png); 
+}
+.markItUp .numeric a {
+	background-image:url(/img/list-numeric.png);
+}
+
+.markItUp .picture a {
+	background-image:url(/img/picture.png); 
+}
+.markItUp .link a {
+	background-image:url(/img/link.png);
+}
+
+.markItUp .clean a {
+	background-image:url(/img/clean.png);
+}
+.markItUp .preview a {
+	background-image:url(/img/preview.png);
+}
+
+.markItUp .div a{
+	background-image:url(/img/div.png);
+}
+
+.markItUp .standard a{
+	background-image:url(/img/html.png);
+}
+
+.markItUp .class a{
+	background-image:url(/img/class.png);
+}
+
+.markItUp .Id a {
+	background-image:url(/img/id.png);
+}
+
+.markItUp .save a {
+	background-image:url(/img/save.png);
+}

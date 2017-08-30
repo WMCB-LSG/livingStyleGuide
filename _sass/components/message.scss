@@ -1,0 +1,97 @@
+.wmapp-message {
+    &--success {
+        background: none repeat scroll 0 0 lighten($green, 50%);
+		@include border(1px, $green);
+        margin-bottom: 1.125rem;
+        padding: 1.125rem;
+        color: $black ;
+    }
+
+    &-alert {
+		background: none repeat scroll 0 0 lighten($red, 40%);
+		@include border(1px, $maroon);
+        margin-bottom: 1.125rem;
+        padding: 1.125rem;
+        color: $black;
+    }
+
+    &-notification {
+        background: none repeat scroll 0 0 lighten($ocher, 40%);
+		@include border(1px, $ocher);
+        margin-bottom: 1.125rem;
+        padding: 1.125rem;
+        color: $black;
+    }
+}
+
+// Mobile status message
+
+.wmapp-status-message-wrapper {
+	display: block;
+	width: 100%;
+	position: fixed;
+	bottom: 1.25rem;
+	left: 0;
+	text-align: center;
+	z-index: map-get($zindex, modal );
+	@include transform;
+
+	.wmapp-status-message {
+		display: inline-block;
+		min-width: 50%;
+		max-width: 80%;
+		text-align: center;
+		@include border(1px, $white);
+		background: $grey-dark;
+		color: $white;
+		padding: 0.625rem 1.25rem;
+		@include border-radius;
+		@include transform;
+	}
+}
+
+// Mobile Message
+
+.wmapp-message {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	min-height: 5rem;
+	text-align: center;
+	color: $white;
+	background: fade($grey-dark, 80%);
+	border-bottom: 1px solid $grey-dark;
+	padding: 1.25rem;
+	box-sizing: border-box;
+	z-index: map-get($zindex, modal );
+	@include transform(0, -100%);
+	@include enable-select;
+
+	&:before {
+		content: '';
+		display: inline-block;
+		height: 100%;
+		vertical-align: middle;
+	}
+
+	p {
+		display: inline-block;
+		vertical-align: middle;
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		font-family: $font-normal;
+		font-size: 1rem;
+		@include enable-select;
+	}
+
+	&.visible {
+		@include transform(0, 0);
+	}
+
+	&.error {
+		background: fade($error, 70%);
+		border-bottom: 1px solid $error;
+	}
+}

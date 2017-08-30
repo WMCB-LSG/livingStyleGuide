@@ -1,0 +1,122 @@
+#wmapp-timeline-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    height: calc(50% + 2.5rem);
+    width: 100%;
+    overflow-y: auto;
+    border-top: 1px solid $grey;
+
+    li {
+        display: block;
+        margin-bottom: 0.25rem;
+        border-top: 1px solid $grey;
+        padding: 0.625rem 0;
+        clear: both;
+
+        &:first-child {
+            border-top: none;
+        }
+
+        &[data-action*="#"] {
+            cursor: pointer;
+            background: url("/img/forward.svg") no-repeat;
+            background-position: 100% calc(90%);
+            background-size: 2rem;
+            padding-bottom: 3rem;
+
+            &:active,
+            &:focus {
+                background-color: $yellow;
+            }
+        }
+
+        > span {
+            font-size: 0.75rem;
+            display: inline-block;
+
+            &.date {
+                font-weight: bold;
+                margin-right: 0.625rem;
+                margin-left: 0;
+            }
+
+            &.description {
+                display: block;
+            }
+        }
+    }
+
+    .content {
+        font-weight: bold;
+    }
+
+    .date {
+        margin-left: 0.625rem;
+        color: $grey;
+        font-size: 0.85rem;
+    }
+
+    .description {
+        display: block;
+    }
+}
+
+//Mobile Timeline Style
+
+#wmapp-timeline-view-container {
+	height: 100%;
+	width: "calc(100% + 2.5rem)" !important;
+	margin: -1.25rem 0 0 -1.25rem;
+}
+
+#wmapp-timeline-view {
+	height: 50%;
+	width: 100%;
+}
+
+#wmapp-timeline-list {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	height: "calc(50% + 2.5rem)";
+	width: 100%;
+	overflow-y: auto;
+	border-top: 1px solid $grey;
+
+	li {
+		border-top: 1px solid $grey;
+		padding: 1.25rem 2.5rem;
+		clear: both;
+
+		&:first-child {
+			border-top: none;
+		}
+
+		&[data-action*="#"] {
+			cursor: pointer;
+			background: url(../img/forward.svg) no-repeat;
+			background-position: 100% calc(100% - 0.625rem);
+			background-size: 2rem;
+			padding-bottom: 2.5rem;
+
+			&:focus, &:active {
+				background-color: $accent;
+			}
+		}
+
+		& > span {
+			font-size: 0.75rem;
+			display: inline-block;
+
+			&.date {
+				font-family: $font-semibold;
+				margin-right: 0.625rem;
+			}
+
+			&.description {
+				display: block;
+			}
+		}
+	}
+}

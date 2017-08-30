@@ -1,0 +1,49 @@
+.wmapp-chips {
+	margin-bottom: 1rem;
+}
+
+.wmapp-chips > input {
+	margin-bottom: 0;
+}
+
+.wmapp-chips > .wmapp-chips-selected > div {
+	@include flexbox;
+	@include flex-wrap;
+}
+
+.wmapp-chips > .wmapp-chips-selected > div > div {
+	flex-grow: 0;
+	flex-shrink: 0;
+	background: $grey;
+	border-radius: $spacing-unit / 2;
+	padding: 0.625rem;
+	margin: 0 0.625rem 0.625rem 0;
+}
+
+.wmapp-chips > .wmapp-chips-selected > div > div > img {
+	width: 1rem;
+	height: 1rem;
+	margin-left: 0.25rem;
+	cursor: pointer;
+}
+
+.wmapp-chips > .wmapp-chips-autocomplete > div {
+	border: 1px solid $black;
+}
+
+.wmapp-chips > .wmapp-chips-autocomplete > div.empty {
+	display: none;
+}
+
+.wmapp-chips > .wmapp-chips-autocomplete > div > div {
+	padding: 0.25rem;
+	cursor: pointer;
+}
+
+.wmapp-chips > .wmapp-chips-autocomplete > div > div:hover {
+	background: rgb(221,221,221);
+}
+
+.wmapp-chips > .wmapp-chips-autocomplete > div > div.selected {
+	background: $grey;
+}

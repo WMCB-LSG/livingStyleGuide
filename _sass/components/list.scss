@@ -1,0 +1,19 @@
+.wmapp-list {
+    ul {
+        list-style-type: none;
+        margin-left: 0;
+
+        li {
+            div {
+                display: inline-block;
+                padding: 1rem 0;
+            }
+
+            ul {
+                &.button-group {
+                    float: right;
+                }
+            }
+        }
+    }
+}

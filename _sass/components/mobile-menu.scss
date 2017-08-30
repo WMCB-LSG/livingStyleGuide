@@ -1,0 +1,113 @@
+#wmappMobileMenu {
+	position: fixed;
+	left: 0;
+	top: 0;
+	display: block;
+	width: 50%;
+	height: 100%;
+	background: $primary;
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	z-index: map-get($zindex, nav );
+	overflow-y: auto;
+	@include transform(200%);
+	&[data-side="left"] {
+		@include transform(-100%);
+	}
+	&.active {
+		@include transform(100%);
+		&[data-side="left"] {
+			@include transform(0);
+		}
+	}
+
+	li {
+		display: block;
+		height: 3rem;
+		text-align: right;
+		border-bottom: 1px solid $grey;
+
+		&:first-child {
+			background: $grey-dark;
+			color: $white;
+			box-sizing: border-box;
+			padding: 0.625rem;
+			font-family: $font-semibold;
+			line-height: 2rem;
+			border-bottom: none;
+		}
+
+		a {
+			&:link,
+			&:visited,
+			&:active,
+			&:hover,
+			&:focus {
+				text-decoration: none;
+				padding: 0.625rem;
+				display: block;
+				width: 100%;
+				height: 100%;
+				color: $white;
+				line-height: 2rem;
+				box-sizing: border-box;
+				outline: none;
+				border: none;
+				overflow: hidden;
+			}
+
+			&.activated,
+			&:active,
+			&:hover {
+				background: $grey;
+			}
+			span {
+				display: inline-block;
+			}
+			img {
+				height: 100%;
+				display: inline-block;
+				vertical-align: top;
+				margin-right: 0.625rem;
+			}
+		}
+	}
+
+	&:after {
+		display: block;
+	    content: attr(data-version);
+	    color: $primary-font;
+	    font-size: 0.5rem;
+	    position: fixed;
+	    bottom: 0;
+	    margin: 0 auto;
+	    width: 100%;
+	    text-align: right;
+	    padding: 0.625rem;
+	}
+
+	&[data-side="left"] {
+		&:after, li {
+			text-align: left;
+		}
+	}
+}
+
+#wmappMobileMenuHotspot {
+	display: none;
+	position: absolute;
+	width: 50%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: map-get($zindex, assist );
+
+	&.active {
+		display: block;
+	}
+
+	&[data-side="left"] {
+		left: 50%;
+	}
+}

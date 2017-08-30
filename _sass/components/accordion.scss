@@ -1,0 +1,123 @@
+.wmapp-accordion {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    > li {
+        margin-top: 1.25rem;
+
+        > a {
+            display: block;
+            color: $grey-dark;
+            font-weight: 700;
+
+            &:after {
+                content: '>';
+                display: inline-block;
+                margin-left: 0.625rem;
+                transform: translate3d(0,0,0);
+                -webkit-transform: translate3d(0,0,0);
+                transition-duration: 200ms;
+                -webkit-transition-duration: 200ms;
+            }
+        }
+
+        &.active {
+            > a {
+                &.active {
+                    transform: rotate(90deg);
+                }
+            }
+        }
+    }
+
+    .wmapp-accordion-content {
+        display: none;
+    }
+}
+@-webkit-keyframes rotating {
+    from {
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+    }
+}
+@keyframes rotating {
+    from {
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+
+.accordion-icon {
+    &:before {
+        font-family: FontAwesome;
+        content: "\f055";
+        font-size: 1rem;
+        padding-right: 0.5rem;
+    }
+}
+
+.active {
+    &.accordion-icon {
+        &:before {
+            font-family: FontAwesome;
+            content: "\f056";
+        }
+    }
+}
+
+// Mobile Style 
+
+.wmapp-accordion {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+
+	& > li {
+		margin-top: 1.25rem;
+
+		& > a {
+			display: block;
+			color: rgb(77,77,77);
+			font-weight: 700;
+
+			&:after {
+				content: '>';
+				display: inline-block;
+				margin-left: 0.625rem;
+				@include transform(0,0,0, $animation-duration-quick);
+			}
+		}
+
+		&.active {
+			& > .wmapp-accordion-content {
+				display: block;
+                @include border(1px, opacify($black, 0.1) );
+				@include border-radius(3px);
+				border-top: none;
+				padding: 1.25rem;
+				padding-top: 0;
+			}
+
+			& > a:after {
+				transform: rotate(90deg);
+				-webkit-transform: rotate(90deg);
+			}
+		}
+	}
+
+	.wmapp-accordion-content {
+		display: none;
+	}
+}

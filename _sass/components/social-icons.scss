@@ -1,0 +1,28 @@
+$platforms: 
+(twitter, $twitter),
+(facebook, $facebook),
+(googlePlus, $googleplus),
+(linkedin, $linkedin),
+(pintertest, $pinterest)
+;
+
+.wmapp-social-icon {
+    .buttons {
+        display: none;
+    }
+}
+
+
+button {
+    &.wmapp-social-icon {
+        @each $platform, $plat-var in $platforms {
+            &.#{$platform}{
+                background: #{$plat-var};
+        
+                &:hover{
+                    background: saturate($plat-var, 25%); 
+                }
+            }
+        }
+    }
+}

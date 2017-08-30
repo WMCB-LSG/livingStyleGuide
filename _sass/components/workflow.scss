@@ -1,0 +1,90 @@
+.wmapp-workflow-selected-step {
+    background-color: fade($black, 10%);
+    border-spacing: 0.625rem;
+    padding: 0.625rem;
+    margin-bottom: 1.25rem;
+    -webkit-border-radius: 0.25rem;
+    -moz-border-radius: 0.25rem;
+    border-radius: 0.25rem;
+}
+
+.wmapp-workflow-text-view {
+    > tbody {
+        > tr {
+            &.wmapp-workflow-current-step {
+                background: $blue-light;
+            }
+        }
+    }
+}
+
+.wmapp-workflow-text-view {
+    width: 100%;
+}
+
+.wmapp-workflow-text-item-current {
+    width: 7%;
+}
+
+i.wmapp-workflow-current-mark {
+    color: $grey;
+}
+
+i.wmapp-workflow-transition-mark {
+    color: $grey;
+}
+
+i.wmapp-workflow-transition-mark-heading {
+    color: $grey;
+}
+
+ul {
+    &.wmapp-admin-workflow-statement-options {
+        list-style-type: none;
+        min-height: 4.5rem;
+        list-style-image: none !important;
+        width: 100%;
+        padding: 0 0 1.25rem;
+        margin-left: 0;
+        list-style: none;
+    }
+}
+
+.wmapp-admin-workflow-statement-options-placeholder {
+    border: 1px solid $blue-light !important;
+    background: $blue-light !important;
+    height: 2rem !important;
+    margin: 0.5rem;
+    width: 7.5rem;
+}
+
+.wmapp-core-workflow_transition_rule-statements {
+    // border: 1px solid $blue-light !important;
+    @include border(1px, $blue-light);
+}
+
+// Mobile Styles 
+
+
+.wmapp-workflow-text-view {
+	width: 100%;
+
+	& > tbody > tr.wmapp-workflow-current-step {
+		background: rgb(204,232,241);
+	}
+}
+
+.wmapp-workflow-text-item-current {
+	width: 7%;
+}
+
+i {
+	&.wmapp-workflow-current-mark,
+	&.wmapp-workflow-transition-mark {
+		color: $grey;
+	}
+
+	&.wmapp-workflow-transition-mark-heading {
+		color: $black;
+	}
+}

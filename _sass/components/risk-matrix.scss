@@ -1,0 +1,37 @@
+input {
+    &.wmapp-risk-matrix-input[readonly] {
+        background-color: $white;
+        cursor: pointer;
+    }
+
+    &.wmapp-date-picker-input[readonly] {
+        background-color: $white;
+        cursor: pointer;
+    }
+}
+
+//Admin Risk Matrix Radio Group
+.wmapp-risk-matrix-radio-group-wrapper h5 {
+    font-size: 0.75rem;
+    line-height: 1;
+  }
+  .wmapp-risk-matrix-radio-group li {
+    padding: 0;
+    text-align: center;
+  }
+  .wmapp-risk-matrix-radio-group li > label {
+    font-size: 0.5rem;
+  }
+  .wmapp-risk-matrix-radio-group div.switch.small label {
+    margin: 0 auto;
+    width: 2.5rem;
+  }
+  .wmapp-risk-matrix-radio-group div.switch.small label:after {
+    width: 0.625rem;
+  }
+  .wmapp-risk-matrix-radio-group div.switch.small input:checked + label:after {
+    left: 1.5rem;
+  }
+  .collapse-radio-group {
+    margin: 0.125rem;
+  }

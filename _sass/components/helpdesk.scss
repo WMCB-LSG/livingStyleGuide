@@ -1,0 +1,57 @@
+//Helpdesk
+
+.wmapp-admin-helpdesk-side-tab {
+    color: $white;
+    display: block;
+    position: fixed;
+    top: 7rem;
+    right: 0;
+    width: 2rem;
+    height: 6rem;
+    z-index: map-get($zindex, help );
+  }
+  .wmapp-admin-helpdesk {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: -18rem;
+    width: 18rem;
+    height: 100%;
+    background: $black;
+    margin-top: 3rem;
+    padding: 3.75rem 0.625rem 0.625rem;
+    z-index: map-get($zindex, help );
+    overflow-y: scroll;
+    border-left: 0.625rem solid $blue-dark;
+    color: $white;
+  }
+  .wmapp-admin-helpdesk h2,
+  .wmapp-admin-helpdesk h2 a {
+    color: $white;
+  }
+  div.wmapp-admin-helpdesk-list {
+    @include border(1px, $grey);
+    padding: 0.625rem;
+  }
+  div.wmapp-admin-helpdesk-list-options {
+    @include border(1px, $grey);
+  }
+  ul.wmapp-admin-helpdesk-list {
+    border: 0;
+    background: transparent;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .wmapp-admin-helpdesk-list li {
+    border: 0;
+    background: transparent;
+    margin: 0;
+    padding: 0.25rem;
+    width: 100%;
+  }
+  div.wmapp-admin-helpdesk-list-sort {
+    @include border(1px, $grey);
+    padding: 0.125rem;
+    margin-bottom: 0.25rem;
+  }

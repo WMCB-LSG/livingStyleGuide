@@ -1,0 +1,85 @@
+
+.wmapp-dialog {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	// z-index:99999;
+    z-index: map-get($zindex, modal);
+	background: rgba(0, 0, 0, 0.5);
+	text-align: center;
+}
+
+.wmapp-dialog:before {
+	content: '';
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle
+}
+
+.wmapp-dialog-content {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	border-radius: $spacing-unit / 2;
+	background-color: $white;
+	padding: 1rem;
+	text-align: left;
+	min-width: 15.625rem;
+	width: 50%;
+	overflow: auto;
+}
+
+.wmapp-dialog-content-close {
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 1rem;
+	height: 2rem;
+	line-height: 2rem;
+	box-sizing: content-box;
+	cursor: pointer;
+}
+.wmapp-dialog-content-close:active {
+	background: rgba(0, 0, 0, 0.1);
+}
+
+.wmapp-dialog-content-title {
+	padding: 1rem;
+	margin: -1rem 0 1rem -1rem;
+	width: 100%;
+	background: $grey;
+	font-size: 1.2rem;
+	font-weight: bold;
+	height: 2rem;
+	line-height: 2rem;
+	box-sizing: content-box;
+}
+
+.wmapp-dialog-content-buttons {
+	text-align: right;
+}
+
+.wmapp-dialog-content-buttons button {
+	display: inline-block;
+	margin: 1rem 0 0 1rem;
+}
+
+.wmapp-dialog-content-buttons button:hover {
+	opacity: 0.8;
+}
+
+.wmapp-dialog-content-buttons button:last-child {
+	margin-right: 0;
+}
+
+.wmapp-dialog-content.warning .wmapp-dialog-content-title,
+.wmapp-dialog-content.warning .wmapp-dialog-content-buttons button {
+	background: $red;
+	color: $white;
+}
+
+.wmapp-dialog-content.warning .wmapp-dialog-content-close {
+	color: $white;
+}

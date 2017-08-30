@@ -1,0 +1,13 @@
+.columns {
+    //padding-left: 0;
+    //padding-right: 0;
+    &.wmapp-col-1,
+    &.wmapp-col-2,
+    &.wmapp-col-3 {
+        //padding-left: 0;
+        //padding-right: 0;
+        .row {
+            //margin: 0;
+        }
+    }
+}

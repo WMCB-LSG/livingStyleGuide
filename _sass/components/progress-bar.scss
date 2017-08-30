@@ -1,0 +1,64 @@
+.wmapp-progress-bar {
+    width: 100%;
+    background: $grey;
+    border-radius: 0.25rem;
+
+    > div {
+        background: $green;
+        border-radius: 0.25rem;
+        color: $white;
+        font-size: 1rem;
+        padding: 0.25rem;
+        text-align: left;
+    }
+
+    .overdue {
+        > div {
+            background: $red;
+        }
+    }
+}
+// Mobile Progress
+.wmapp-progress-bar-wrapper {
+	display: block;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: map-get($zindex, help );
+	text-align: center;
+
+	&:before {
+		content: '';
+		display: inline-block;
+		height: 100%;
+		vertical-align: middle;
+	}
+
+	ul {
+		display: inline-block;
+		vertical-align: middle;
+		width: 80%;
+		list-style-type: none;
+		margin: 0;
+		padding:0;
+
+		li {
+			background: $grey;
+			margin-bottom: 0.625rem;
+			text-align: left;
+			overflow: hidden;
+			@include border-radius;
+
+			span {
+				display: inline-block;
+				color: $primary-font;
+				padding: 0.25rem;
+				background: $primary;
+				text-align: center;
+				width: 0;
+			}
+		}
+	}
+}

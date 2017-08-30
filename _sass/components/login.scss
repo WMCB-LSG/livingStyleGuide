@@ -1,0 +1,409 @@
+.wmapp-login-view, .wmapp-registration-view {
+    padding: 0.5rem;
+}
+
+.fa-angle {
+    &-double {
+        &-left {
+            &:before {
+                font-family: FontAwesome;
+                content: "\f100";
+            }
+        }
+
+        &-right {
+            &:before {
+                font-family: FontAwesome;
+                content: "\f101";
+            }
+        }
+    }
+
+    &-left {
+        &:before {
+            font-family: FontAwesome;
+            content: "\f104";
+        }
+    }
+
+    &-right {
+        &:before {
+            font-family: FontAwesome;
+            content: "\f105";
+        }
+    }
+}
+
+// Mobile Login 
+
+
+.wmapp-site-demo-signup-form,
+#CoreLoginTile {
+	background: $background;
+	padding: 2.5rem;
+	max-width: 16rem;
+	margin: 0 auto;
+
+	& > img {
+		width: 100%;
+		min-width: 6rem;
+		display: block;
+		margin: 0 auto 1.25rem auto;
+	}
+
+	small {
+		display: none !important;
+	}
+
+	input {
+		background: $transparent;
+		border: none;
+		border-bottom: 1px solid $white;
+		@include border-radius(0);
+		color: $white;
+		width: "calc(100% - 52px)";
+		margin: 10px auto;
+		display: inline-block;
+		vertical-align: middle;
+		padding: 0;
+
+		&:focus {
+			background: inherit;
+			border: inherit;
+			border-bottom: 1px solid $white;
+		}
+
+		&::-webkit-input-placeholder {
+			color: $white;
+			font-style: italic;
+		}
+	}
+
+	.error {
+		input {
+			border-color: $primary;
+			-webkit-animation-name: pulse;
+			-webkit-animation-duration: 200ms;
+			-webkit-transform-origin:50% 50%;
+			-webkit-animation-iteration-count: 2;
+			-webkit-animation-timing-function: ease;
+		}
+	}
+
+
+	.wmapp-form > div > div:before {
+		content: ' ';
+		display: inline-block;
+		width: 2rem;
+		height: 2rem;
+		vertical-align: middle;
+		background-size: 100%;
+		background-repeat: no-repeat;
+		margin-right: 0.625rem;
+		//This repeats in a bunch of different places in this component. Look at using a placeholder selector to then extend. 
+	}
+
+
+	label {
+		display: none;
+	}
+
+	button {
+		background: $transparent;
+		@include border(1px, $white);
+		font-size: 1.125rem;
+		display: block;
+		margin: 1.25rem auto 0 auto;
+		padding: 0.5rem 1.25rem;
+		color: $white;
+
+	 	&:hover,
+		&.activated {
+			background: fade($white, 30%);
+			padding: 0.5rem 1.25rem;
+		}
+	}
+
+	p {
+		font-size: 0.75rem;
+		color: $white;
+		margin: 1.25rem auto;
+		line-height: normal;
+		width: 67%;
+		text-align: center;
+
+		a {
+			color: $white;
+			text-decoration: underline;
+		}
+	}
+
+	.wmapp-member-field-firstname > div:before,
+	.wmapp-member-field-lastname > div:before {
+		background-image: url(../img/person.svg);
+		content: ' ';
+		display: inline-block;
+		width: 2rem;
+		height: 2rem;
+		vertical-align: middle;
+		background-size: 100%;
+		background-repeat: no-repeat;
+		margin-right: 0.625rem;
+	}
+
+	.wmapp-member-field-lastname > div:before {
+		background-image: url(../img/people.svg);
+	}
+
+	.wmapp-member-field-email > div:first-child:before {
+		background-image: url(../img/email.svg);
+		content: ' ';
+		display: inline-block;
+		width: 2rem;
+		height: 2rem;
+		vertical-align: middle;
+		background-size: 100%;
+		background-repeat: no-repeat;
+		margin-right: 0.625rem;
+	}
+
+
+	.button-group {
+		text-align: center;
+		button {
+			margin:1.25rem;
+			background: $transparent;
+			@include border(1px, $white);
+			color: $white;
+			display: inline-block;
+
+			&:hover,
+			&.activated {
+				background: fade($white, 30%);
+			}
+		}
+	}
+}
+
+.wmapp-core-login-site > div:before {
+	background-image: url(../img/site.svg);
+}
+
+.wmapp-core-login-email > div:before {
+	background-image: url(../img/email.svg);
+}
+
+.wmapp-core-login-password > div:before {
+	background-image: url(../img/password.svg);
+}
+
+.wmapp-site-demo-signup-form .wmapp-form .wmapp-site-demo-signup-member > div:before,
+.wmapp-site-demo-signup-form .wmapp-form .wmapp-site-demo-signup-agree > div:before {
+	display: none;
+}
+
+.wmapp-site-demo-signup-agree {
+	& > div {
+		&:first-child {
+			padding-left: 3rem;
+		}
+
+		& > label {
+			display: inline !important;
+			color: $white;
+			font-size: 0.8rem;
+
+			a {
+			    color: $white;
+			    text-decoration: underline;
+			}
+		}
+	}
+
+	input[type="checkbox"] {
+		display: inline;
+		width: initial;
+		margin-left: 0.625rem;
+	}
+}
+// Sign up 
+
+
+#SiteExpressSignupForm {
+	max-width: 20rem;
+	margin: 0 auto;
+
+	small {
+		display: none;
+	}
+
+	> img {
+		width: 50%;
+		max-width: 12.5rem;
+		min-width: 6rem;
+		display: block;
+		margin: 0 auto 1.25rem auto;
+	}
+
+	input {
+		&[type="text"],
+		&[type="email"] {
+			background: $transparent;
+			border: none;
+			border-bottom: 1px solid $white;
+			@include border-radius(0);
+			color: $white;
+			width: "calc(100% - 52px)";
+			margin: 0.625rem auto;
+			display: inline-block;
+			vertical-align: middle;
+			padding: 0;
+		}
+
+		&[type="checkbox"] {
+			width: 2.5rem;
+		}
+
+		&::-webkit-input-placeholder {
+			color: $white;
+			font-style: italic;
+		}
+	}
+	.error {
+		input {
+			border-color: $primary;
+			-webkit-animation-name: pulse;
+			-webkit-animation-duration: 200ms;
+			-webkit-transform-origin:50% 50%;
+			-webkit-animation-iteration-count: 2;
+			-webkit-animation-timing-function: ease;
+			animation-name: pulse;
+			animation-duration: 200ms;
+			transform-origin:50% 50%;
+			animation-iteration-count: 2;
+			animation-timing-function: ease;
+		}
+	}
+
+	label {
+		display: none;
+	}
+
+	#SiteExpressSignupForm .wmapp-submit-button {
+		background: $transparent;
+		@include border(1px, $white);
+		font-size: 1.125rem;
+		display: block;
+		margin: 1.25rem auto;
+		padding: 0.5rem 1.25rem;
+	}
+
+	#SiteExpressSignupForm .wmapp-submit-button.activated {
+		background: rgba(255, 255, 255, 0.3);
+	}
+
+	p {
+		font-size: 0.75rem;
+		color: $white;
+		margin: 1.25rem auto;
+		line-height: normal;
+		width: 67%;
+		text-align: center;
+
+		a {
+			color: $white;
+			text-decoration: underline;
+		}
+	}
+
+	.button-group{
+		button {
+			margin:1.25rem;
+			background: $transparent;
+			@include border(1px, solid);
+			color: $white;
+			&:first-child {
+				margin-left: 0;
+			}
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+
+}
+
+.wmapp-site-demo-signup-site-name > div:first-child:before,
+.wmapp-member-field-firstname > div:before,
+.wmapp-member-field-lastname > div:before,
+.wmapp-core-login-email > div:before,
+.wmapp-member-field-email > div:first-child:before,
+.wmapp-core-login-password > div:before,
+.wmapp-site-express-signup-site-name > div:first-child:before {
+	background-image: url(../img/site.svg);
+	content: ' ';
+	display: inline-block;
+	width: 2rem;
+	height: 2rem;
+	vertical-align: middle;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	margin-right: 0.625rem;
+}
+
+.wmapp-site-demo-signup-country,
+.wmapp-site-express-signup-country {
+	& > div:before {
+		background-image: url(../img/globe.svg);
+		content: ' ';
+		display: inline-block;
+		width: 2rem;
+		height: 2rem;
+		vertical-align: middle;
+		background-size: 100%;
+		background-repeat: no-repeat;
+		margin-right: 0.625rem;
+	}
+
+	select {
+		background: $transparent;
+		border: none;
+		border-bottom: 1px solid $white;
+		@include border-radius(0);
+		color: $white;
+		width: "calc(100% - 52px)";
+		margin: 0.625rem auto;
+		display: inline-block;
+		vertical-align: middle;
+		font-style: italic;
+		padding: 0;
+		outline: none;
+		cursor: pointer;
+
+		option {
+			color: $black;
+			width: "calc(100% - 52px)";
+		}
+	}
+}
+.wmapp-site-express-signup-agree > div:first-child {
+	padding-left: 3rem;
+}
+
+.wmapp-site-express-signup-agree > div > label {
+	display: inline !important;
+	color: $white;
+	font-size: 0.8rem;
+}
+
+.wmapp-site-express-signup-agree > div > label a {
+    color: $white;
+    text-decoration: underline;
+}
+
+
+.wmapp-mobile-content[data-tile="core_login_tile"] {
+	height:100vh;
+	top:0;
+	padding: 0 1rem;
+}

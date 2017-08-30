@@ -1,0 +1,68 @@
+.wmapp-admin-available-tiles-list-tab {
+    display: block;
+    position: fixed;
+    top: 2rem;
+    right: 0;
+    width: 2rem;
+    height: 6.25rem;
+    cursor: pointer;
+    z-index: map-get($zindex, nav );
+  }
+  .wmapp-admin-available-tiles-list {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: -18rem;
+    width: 18rem;
+    height: 100%;
+    background: $primary-color;
+    padding: 60px 10px 10px;
+    margin-bottom: 50px;
+    z-index: map-get($zindex, overlay );
+    overflow-y: scroll;
+    border-left: 10px solid rgb(26,60,109);
+    color: $white;
+    h2 {
+        color: $white;
+        font-family: $base-font-family;
+        font-size: 1rem;
+    }
+    li, li a{
+        color: $white;
+        font-family: $base-font-family;
+        padding:0.125rem;
+        padding-left:0.25rem;
+        font-size: 0.75rem; 
+    }
+  }
+
+
+  ul.wmapp-admin-tiles-list {
+    list-style: none;
+  }
+  header.wmapp-admin-tile-header {
+    position: relative;
+    border: 0;
+    div {
+        pointer-events: auto;  
+    }
+    > div {
+        position: absolute;
+        width: 100%;
+        pointer-events: none;  
+    }
+  }
+
+  .wmapp-admin-tile-header-options {
+    position: relative;
+    right: calc(50% - 52px);
+    background: rgb(51,51,51);
+    border-radius: 0.25rem;
+    margin-top: 0.25rem;
+    width: 10rem;
+    text-align: center;
+    -webkit-box-shadow: 0 3px 6px 0 rgba(50, 50, 50, 0.27);
+    -moz-box-shadow: 0 3px 6px 0 rgba(50, 50, 50, 0.27);
+    box-shadow: 0 3px 6px 0 rgba(50, 50, 50, 0.27);
+    z-index: map-get($zindex, modal );
+  } 

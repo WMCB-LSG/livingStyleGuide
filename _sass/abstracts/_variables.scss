@@ -1,56 +1,156 @@
+//////// YOOOOO REFACTOR THE HELL OUT OF THIS IT'S UGLY
+
+
 // Use variables whenever a integer is normalised throughout your styling (i.e. 16px font size)
 // or for the branding colors in the style guide.
 // If you find whilst writing your code that you are repeating the same value, make a variable for it.
 // We want to code smarter to be more efficent.
 
+//Import Icon Fonts
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700|Open+Sans:300,400,600,700|Source+Code+Pro');
 
 //Font Variables
 $base-font-family: "Open Sans", "Helvetica", Arial, sans-serif !default;
 $base-font-size: 16px !default;
 $base-font-weight: 400;
-$small-font-size: $base-font-size * 0.875;
+$small-font-size: $base-font-size * 0.875; //14px
 $base-line-height: 1;
+$base-border-radius: $base-font-size / 4;
+
+
+// Native app Variables
+$animation-duration: 300ms;
+$animation-duration-quick: 150ms;
+$animation-duration-slow: 500ms;
+$timing-easeOutCubic: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+$timing-bounceOut: cubic-bezier(0.250, 0.460, 0.420, 1.345);
+
+$maxIphone5: 568px; //max-height
+$minIphone5: 568px;
 
 
 //Spacing and Padding
-$spacing-unit: 8px !default;
-$button-image-size: 25px;
-$date-picker-size: 35px;
+$spacing-unit: $base-font-size / 2 !default;
+$button-image-size: $base-font-size * 1.5; // 24px
+$date-picker-size: $base-font-size * 2.25; //36px
 
 
 // Color Variables
+	// Colors are writen in RGB/a 
+	// Only use RGBa if the color does not have a transparency of the 1.0
+	// If using RGBa, provide a fallback rgb color {Look for a sass function to do this for us}
 
 	//Primary Color
-	$primary-color:#9B9B9B;
+	$primary-color: rgb(51,52,102);
+	$primary-color-accent:saturate($primary-color, 21.21%);
+
+
 	$primary-dark:darken($primary-color, 15%); //Darkens Color by 15%
 	$primary-darker:darken($primary-color, 30%); //Darkens Color by 30%
 	$primary-light:lighten($primary-color, 15%); //Lightens Color by 15%
 	$primary-lighter:lighten($primary-color, 30%); //Lightens Color by 30%
 	// Secondary Colors
-	$secondary-charcoal:#323232;
-	$secondary-gold:#F29A38;
-	$secondary-orange:#F15C38;
-	$secondary-blue:#2A7698;
-	$secondary-white:#FFFFFF;
-	$secondary-black:#1A1A1A;
+	$secondary-color: rgb(255,87,36);
+	$secondary-color-accent: saturate($secondary-color,21.21%);
+	$secondary-white:rgb(242,238,237);
+
+	$white: rgb(255,255,255);
+	$black: rgb(0,0,0);
+
+	$secondary-charcoal:rgb(50,50,50);
+	$secondary-gold:rgb(242,154,56);
+	$secondary-orange:rgb(241,92,56);
+	$secondary-blue:rgb(42,118,152);
+	$secondary-black:rgb(26,26,26);
 	//Text Color
-	$font-color:rgba(0,0,0,0.87);
+	$font-color-primary:opacify($black, 0.87);
+	$font-color-secondary:opacify($black, 0.54);
+	$font-color-disabled:opacify($black, 0.38);
+	//active modifier is only used in menu or tab items that are not on dark
+	$font-color-primary-active:$secondary-color;
 
-// Z-index
+	$font-color:$font-color-primary;
 
-$Z1: 1000;
+	$font-on-dark-primary:$white;
+	$font-on-dark-secondary:opacify($white, 0.7);
+	$font-on-dark-disabled:opacify($white, 0.5);
+
+	$red: rgb(169,20,20);
+	$green: rgb(20,169,67);
+
+	$background-color: $secondary-white;
+	$brand-color: $primary-color;
+
+
+	$grey: rgb(186,186,186);
+	$grey-light: rgb(248, 248, 248);
+	$grey-dark: darken($grey, 25%);
+	$orange: rgb(255,165,0);
+	$teal: rgb(27,175,151);
+	$maroon: rgb(179,16,16);
+	$blue: rgb(0,174,239);
+	$blue-light: lighten($blue, 30%);
+	$blue-dark: darken($blue, 30%);
+	$yellow: rgb(255,203,11);
+	$aqua: rgb(128,239,239);
+	$purple: rgb(158,77,255);
+	$ocher: rgb(179,129,16);
+
 // Device Sizes
-$large-screen:1024px;
-$small-screen:540px;
+	$large-screen:64rem; // 1024px
+	$small-screen:33.75rem; // 540px
 
 // Social Colors
-$twitter: #09B0ED;
-$twitter-hover: darken($twitter, 25%);
-$facebook: #3D5A98;
-$facebook-hover: darken($facebook, 25%);
-$googleplus: #DD4C39;
-$googleplus-hover: darken($googleplus, 25%);
-$linkedin: #035A87;
-$linkedin-hover: darken($linkedin, 15%);
-$pinterest: #CB2127;
-$pinterest-hover: darken($pinterest, 25%);
+	$twitter: rgb(9,176,237);
+	$twitter-hover: darken($twitter, 25%);
+	$facebook: rgb(61,90,152);
+	$facebook-hover: darken($facebook, 25%);
+	$googleplus: rgb(221,76,57);
+	$googleplus-hover: darken($googleplus, 25%);
+	$linkedin: rgb(3,90,135);
+	$linkedin-hover: darken($linkedin, 15%);
+	$pinterest: rgb(203,33,39);
+	$pinterest-hover: darken($pinterest, 25%);
+
+
+// Z-Index Map
+//Called by using z-index: map-get($zindex, {name} );
+// Josh have a look at this again, take into consideration @fat's writing for medium https://medium.com/@fat/mediums-css-is-actually-pretty-fucking-good-b8e2a6c78b06
+	$zindex: (
+		base: 1,
+		assist: 1000,
+		nav: 2000,
+		overlay: 3000,
+		modal: 4000,
+		help: 5000
+	);
+
+
+// Native App Colors 
+$error: $red;
+
+$primary: $primary-color;
+$primary-dark: $primary-color-accent;
+$primary-font: $font-on-dark-primary;
+
+$secondary: $secondary-color;
+$secondary-dark: $secondary-color-accent;
+$secondary-font: $font-on-dark-primary;
+
+$accent: $secondary;
+$accent-dark: $secondary-dark;
+$accent-font: $secondary-font;
+
+$background: $secondary-white;
+$forground: $grey-dark;
+$transparent: rgba(0,0,0,0);
+
+// Native App Fonts
+
+$font-normal: 'opensans-regular', sans-serif;
+$font-light: 'opensans-light', sans-serif;
+$font-bold: 'opensans-bold', sans-serif;
+$font-semibold: 'opensans-semibold', sans-serif;
+
+

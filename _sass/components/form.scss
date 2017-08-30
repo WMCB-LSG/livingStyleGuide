@@ -1,0 +1,636 @@
+fieldset {
+    padding-left: 0.625rem;
+    margin: 0;
+    border: none;
+    legend {
+        width: 100%;
+        border-bottom: 1px solid $grey-dark;
+        margin-bottom: 1rem;
+        background-color: transparent;
+    }
+    button {
+        display: block;
+        margin: 0 auto 1.25rem;
+        border-radius: 0.25rem;
+    }
+}
+
+.wmadmin-heading {
+    text-align: center;
+    margin-top: 0.625rem;
+
+    > img {
+        height: 3rem;
+    }
+
+    > h1 {
+        font-size: $base-font-size * 2.625;
+        vertical-align: bottom;
+        padding: 0;
+        margin: 0 0 0 1rem;
+    }
+
+    > p {
+        font-size: 1.5rem;
+        margin: 1.25rem 0;
+    }
+}
+
+.center {
+    text-align: center;
+}
+
+span {
+    &.has-tip {
+        border-bottom: none;
+        vertical-align: text-bottom;
+        margin-left: 0.625rem;
+
+        &:focus,
+        &:hover {
+            border-bottom: none;
+            vertical-align: text-bottom;
+            margin-left: 0.625rem;
+        }
+
+        &.tip-right {
+            > img {
+                display: none;
+            }
+
+            &:after {
+                content: ' ' !important;
+                background: url("../../img/question.svg") no-repeat center center;
+                display: inline-block;
+                background-size: 100%;
+                width: 1rem;
+                height: 1rem;
+                vertical-align: text-bottom;
+            }
+        }
+    }
+}
+
+input {
+    &[type="color"],
+    &[type="date"],
+    &[type="datetime"],
+    &[type="datetime-local"],
+    &[type="email"],
+    &[type="month"],
+    &[type="number"],
+    &[type="password"],
+    &[type="search"],
+    &[type="tel"],
+    &[type="text"],
+    &[type="time"],
+    &[type="url"],
+    &[type="week"] {
+        box-shadow: none;
+        @include border-radius(0);
+        @include border(0px);
+        border-bottom:1px solid $grey;
+        outline: none;
+        transition: initial;
+        display: block;
+        font-size: 1rem;
+        margin: 0;
+        padding:0.25rem 0;
+        width: 100%;
+        background: none;
+        text-align: left;
+        color: inherit; 
+        padding-left:0.5rem;
+        &:focus {
+            box-shadow: none;
+            background:rgba(0,0,0,0.04);
+            color:rgba(0,0,0,0.54);
+            border-bottom-color:$primary-color;
+            border-bottom-width:1px;
+        }
+    }
+
+    &[type="range"] {
+        display: inline-block;
+        width: 100%;
+        margin: 0.25rem 0;
+    }
+
+    &.checkbox {
+        > span {
+            margin-left: 0.625rem;
+            font-size: 0.875rem;
+
+            &:after {
+                display: block;
+                content: ' ';
+            }
+        }
+    }
+}
+
+select,
+textarea {
+    box-shadow: none;
+    @include border(1px, $grey-light);
+    outline: none;
+    transition: initial;
+
+    &:focus {
+        box-shadow: none;
+        @include border(1px, $grey-dark);
+    }
+}
+
+label {
+    margin-bottom: 0.25rem;
+    font-weight: 300;
+}
+
+ul {
+    &.wmapp-button-group-spaced {
+        text-align: left;
+        float: left;
+        margin-right: 1.25rem;
+
+        li {
+            margin-right: 0.625rem;
+        }
+    }
+
+    &.button-group {
+        text-align: center;
+    }
+
+    &.wmapp-button-group-capabilities {
+        .button,
+        button {
+            &:hover {
+                background: fade($black, 10%) !important;
+            }
+        }
+    }
+}
+
+button, .button {
+    @include border(1px, $grey-dark);
+    background: $white;
+    color: $grey-dark;
+    outline: none;
+    @include border-radius;
+    border-radius: 0.25rem;
+    transition-duration: 0;
+    -webkit-transition-duration: 0;
+    font-size: 0.8125rem;
+}
+
+.button-group {
+    &.wmapp-button-group-spaced {
+        > li {
+             > button,
+            .button {
+                @extend button;
+            }
+        }
+    }
+
+    &.wmapp-button-group-capabilities {
+        > li {
+             > button,
+            > .button {
+                @extend button;
+            }
+        }
+    }
+}
+
+.wmapp-list-filter {
+    ul {
+        &.wmapp-button-group-spaced {
+            text-align: right;
+        }
+    }
+}
+
+.wmapp-button-group-spaced,
+.wmapp-commands {
+    .button,
+    button {
+        &:hover {
+            background: fade($black, 10%) !important;
+        }
+    }
+}
+
+.wmapp-list-filter {
+    ul {
+        &.wmapp-button-group-spaced {
+            .button {
+                &:hover {
+                    background: fade($black, 10%) !important;
+                }
+            }
+        }
+    }
+}
+
+select {
+    &[disabled] {
+        background-color: $grey;
+        cursor: default;
+    }
+
+    &[multiple] {
+        height: auto;
+        padding-top: 0;
+    }
+}
+
+.wm-invalid-field,
+.wmapp-invalid-field {
+    @include border(1px, $red);
+}
+
+.wysihtml5 {
+    height: 18.75rem;
+}
+
+ul {
+    &.wmapp-autocomplete {
+        display: none;
+        position: absolute;
+        background-color: $grey-light;
+        margin: 0;
+        padding: 0.25rem 0;
+        height: 15.625rem;
+        overflow: scroll;
+        z-index: map-get($zindex, base );
+        width: auto !important;
+
+        li {
+            list-style: none;
+            margin: 0;
+            padding: 0.25rem 0.5rem;
+
+            &.active,
+            &:hover {
+                cursor: pointer;
+                background-color: $grey;
+            }
+
+            a {
+                color: $grey-dark;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.has-tip {
+    border-bottom: 0;
+}
+
+.tooltip {
+    // z-index: 8039;
+    z-index: map-get($zindex, assist );
+}
+
+span {
+    &.notes {
+        color: $grey;
+        font-size: 0.8rem;
+        margin-left: 1.25rem;
+    }
+}
+
+fieldset {
+    legend {
+        background: none;
+    }
+}
+
+.is-required {
+    color: $red;
+    font-weight: bold;
+    padding: 0.125rem;
+}
+
+.wmapp-risk-matrix-radio-group {
+    &-wrapper {
+        h5 {
+            font-size: $small-font-size;
+            line-height: $base-line-height;
+        }
+    }
+
+    li {
+        padding: 0;
+        text-align: center;
+
+        > label {
+            font-size: 0.5rem;
+        }
+    }
+
+    div {
+        &.switch {
+            &.small {
+                label {
+                    margin: 0 auto;
+                    width: 2.4rem;
+
+                    &:after {
+                        width: 0.6rem;
+                    }
+                }
+
+                input {
+                    &:checked {
+                        + label {
+                            &:after {
+                                left: 1.5rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.collapse-radio-group {
+    margin: 0.1rem;
+}
+/*------------------------------------*\
+    $FORM - BLOCK GRID ELEMENTS
+\*------------------------------------*/
+ul {
+    &[class^="large-block-grid-"],
+    &[class^="medium-block-grid-"],
+    &[class^="small-block-grid-"] {
+        .wmapp-add-button,
+        .wmapp-clear-button,
+        .wmapp-delete-button {
+            margin-top: 1.5rem;
+            padding: 0.475rem 1rem 0.5375rem;
+        }
+
+        input,
+        select,
+        textarea {
+            margin: 0;
+        }
+
+        li {
+            padding: 0 0.125rem 0.25rem;
+        }
+
+        input {
+            &[type="checkbox"],
+            &[type="radio"] {
+                height: 2.3125rem;
+            }
+        }
+    }
+
+    &.large-block-grid-3,
+    &.medium-block-grid-3 {
+        li {
+            &.double {
+                width: 66.6666%;
+            }
+        }
+    }
+
+    &.large-block-grid-4,
+    &.medium-block-grid-4 {
+        li {
+            &.double {
+                width: 50%;
+            }
+        }
+    }
+
+    &.large-block-grid-5,
+    &.medium-block-grid-5 {
+        li {
+            &.double {
+                width: 40%;
+            }
+        }
+    }
+
+    &.large-block-grid-6,
+    &.medium-block-grid-6 {
+        li {
+            &.double {
+                width: 33.3333%;
+            }
+        }
+    }
+
+    &.large-block-grid-7,
+    &.medium-block-grid-7 {
+        li {
+            &.double {
+                width: 28.5714%;
+            }
+        }
+    }
+
+    &.large-block-grid-8,
+    &.medium-block-grid-8 {
+        li {
+            &.double {
+                width: 25%;
+            }
+        }
+    }
+
+    &.large-block-grid-9,
+    &.medium-block-grid-9 {
+        li {
+            &.double {
+                width: 22.2222%;
+            }
+        }
+    }
+
+    &.large-block-grid-10,
+    &.medium-block-grid-10 {
+        li {
+            &.double {
+                width: 20%;
+            }
+        }
+    }
+
+    &.large-block-grid-11,
+    &.medium-block-grid-11 {
+        li {
+            &.double {
+                width: 18.18182%;
+            }
+        }
+    }
+
+    &.large-block-grid-12,
+    &.medium-block-grid-12 {
+        li {
+            &.double {
+                width: 16.6666%;
+            }
+        }
+    }
+
+    &[class^="large-block-grid-"],
+    &[class^="medium-block-grid-"],
+    &[class^="small-block-grid-"] {
+        label {
+            font-size: 0.75rem;
+        }
+
+        span {
+            &.has-tip {
+                margin: 0;
+
+                &.tip-right {
+                    &:after {
+                        margin: 0.25rem;
+                    }
+                }
+            }
+        }
+    }
+}
+/** Hide labels for large screen **/
+@media only screen and (min-width: $large-screen) {
+    .wmapp-table-list {
+        > div {
+            div {
+                &:nth-child(n+2) {
+                    label {
+                        display: none;
+                    }
+
+                    ul {
+                        &[class^="large-block-grid-"],
+                        &[class^="medium-block-grid-"],
+                        &[class^="small-block-grid-"] {
+                            .wmapp-delete-button {
+                                margin-top: 0.1rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Mobile Form Style 
+
+// select,
+// textarea,
+// .wmapp-pepper-box-container,
+// input[type="text"],
+// input[type="password"],
+// input[type="date"],
+// input[type="datetime"],
+// input[type="datetime-local"],
+// input[type="month"],
+// input[type="week"],
+// input[type="email"],
+// input[type="number"],
+// input[type="search"],
+// input[type="tel"],
+// input[type="time"],
+// input[type="url"],
+// input[type="color"] {
+// 	// border-color: $primary;
+// 	// @include border-radius;
+// 	margin-bottom: 0;
+// }
+
+input[type="text"][readonly] {
+	background-color: $white;
+}
+
+select[multiple] {
+	height: 6rem;
+}
+
+.wmapp-pepper-box-container {
+	padding: 1.25rem;
+    @include border(1px, $black);
+
+	p,
+	strong {
+		font-weight: normal;
+		font-size: $small-font-size;
+		margin-bottom: 0.125rem;
+	}
+
+	.large-2.medium-2.columns.text-center > p {
+		margin-bottom: 3rem;
+	}
+
+	@media (max-width: 40rem) {
+		input[type="button"] {
+            -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+			margin: 1.25rem 0.25rem;
+		}
+		.large-2.medium-2.columns.text-center > p {
+			display: none;
+		}
+	}
+}
+
+
+fieldset {
+	border: none;
+	margin: 0;
+	padding: 0;
+
+	legend {
+		text-align: center;
+	}
+
+	.button-group {
+		margin-top: 0.625rem;
+	}
+}
+
+.wmapp-site-demo-signup-form fieldset {
+	border: none;
+}
+
+span.postfix {
+	border-color: $primary;
+	@include border-radius;
+}
+
+[class*="block-grid-"] {
+	margin: 0;
+}
+
+.wmapp-single-signature-field-entity {
+	margin-bottom: 0.625rem;
+}
+
+.wmapp-tile > div {
+	padding: 0 0 0.625rem 0 !important;
+}
+
+.wmapp-form {
+	label {
+		margin-top: 1.25rem;
+		font-size: 1rem;
+		font-family: $font-normal;
+	}
+
+	& > div:first-child label {
+		margin-top: 0;
+	}
+}

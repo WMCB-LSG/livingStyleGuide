@@ -4,10 +4,10 @@
     <title>Living Style Guide</title>
     <description>Living Style Guide and Roadmap
 </description>
-    <link>http://localhost:4000/</link>
-    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 29 Aug 2017 13:25:38 +1000</pubDate>
-    <lastBuildDate>Tue, 29 Aug 2017 13:25:38 +1000</lastBuildDate>
+    <link>http://localhost:4000/livingStyleGuide/</link>
+    <atom:link href="http://localhost:4000/livingStyleGuide/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Wed, 30 Aug 2017 15:35:41 +1000</pubDate>
+    <lastBuildDate>Wed, 30 Aug 2017 15:35:41 +1000</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
     
   </channel>

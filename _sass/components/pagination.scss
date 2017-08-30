@@ -1,0 +1,18 @@
+
+.pagination-load-more {
+	margin: 2.5rem 0;
+	a.button {
+		margin: 0;
+	}
+}
+
+ul.pagination {
+	li {
+		&.current {
+			a, button {
+				background: $accent;
+				color: $accent-font;
+			}
+		}
+	}
+}

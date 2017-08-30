@@ -58,7 +58,7 @@ $on-laptop:        1366px;
         "abstracts/_normalise",
         "abstracts/_variables",
         "abstracts/_mixins",
-        "abstracts/_typography"
+        "abstracts/typography/_sassline-base"
 ;
 
 //Elements
@@ -67,8 +67,7 @@ $on-laptop:        1366px;
         "elements/inputs",
         "elements/table",
         "elements/sidebar-menu",
-        "elements/feature-card",
-        "elements/header"
+        "elements/feature-card"
 ;
 
 //Tiles

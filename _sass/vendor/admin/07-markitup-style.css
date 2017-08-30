@@ -1,0 +1,50 @@
+.markItUp .bold a {
+	background-image:url(../../../js/markitup/sets/default/images/bold.png);
+}
+.markItUp .italic a {
+	background-image:url(../../../js/markitup/sets/default/images/italic.png);
+}
+.markItUp .stroke a {
+	background-image:url(../../../js/markitup/sets/default/images/stroke.png);
+}
+
+.markItUp .list-bullet a {
+	background-image:url(../../../js/markitup/sets/default/images/list-bullet.png); 
+}
+.markItUp .numeric a {
+	background-image:url(../../../js/markitup/sets/default/images/list-numeric.png);
+}
+
+.markItUp .picture a {
+	background-image:url(../../../js/markitup/sets/default/images/picture.png); 
+}
+.markItUp .link a {
+	background-image:url(../../../js/markitup/sets/default/images/link.png);
+}
+
+.markItUp .clean a {
+	background-image:url(../../../js/markitup/sets/default/images/clean.png);
+}
+.markItUp .preview a {
+	background-image:url(../../../js/markitup/sets/default/images/preview.png);
+}
+
+.markItUp .div a{
+	background-image:url(../../../js/markitup/sets/default/images/div.png);
+}
+
+.markItUp .standard a{
+	background-image:url(../../../js/markitup/sets/default/images/html.png);
+}
+
+.markItUp .class a{
+	background-image:url(../../../js/markitup/sets/default/images/class.png);
+}
+
+.markItUp .Id a {
+	background-image:url(../../../js/markitup/sets/default/images/id.png);
+}
+
+.markItUp .save a {
+	background-image:url(../../../js/markitup/sets/default/images/save.png);
+}

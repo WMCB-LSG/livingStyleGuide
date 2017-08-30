@@ -1,0 +1,151 @@
+@import "../components/toolkit"
+;
+
+.wmadmin-heading{
+	display:none;
+}
+.crud {
+	// @include border;
+	// @include boxShadow(4px);
+	margin:1rem;
+	// @include border-radius(0.5rem);
+}
+
+.crud-area {
+	@include flexbox;
+	@include border(1px, rgba(0,0,0,0.12));
+	@include flex-direction(row);
+	margin:1rem;
+	overflow: hidden;
+	/* avoid browser level touch actions */
+	touch-action: none;
+	.wmapp-table {
+		@include boxShadow(2px);
+	}
+}
+
+.list-area {
+	@include flexbox;
+	@include flex-direction;
+	flex: 0 0 auto;
+	width: 20rem;
+	min-height: 15rem;
+	min-width: 42rem;
+	max-width:70vw;
+	white-space: nowrap;
+	// background: #838383;
+	// color: white;
+}
+
+table tbody tr:nth-child(even) {
+	background-color:transparent;
+}
+.detail-area{
+	flex: 0 0 auto;
+    width: 100%;
+    min-height: 15rem;
+    min-width: 15rem;
+		h5{
+			background:rgba(0,0,0,0.06);
+			width:100%;
+			border-bottom:1px solid rgba(0,0,0,0.12);
+			color:$primary-dark;
+			font-weight:400;
+			margin-top:0;
+			padding:1rem;
+			padding-bottom:0;
+			min-height:2rem;
+	}
+	.details{
+		padding:1rem;
+		box-sizing:content-box;
+		width:60%;
+
+		.input-group{
+			margin:1rem 0;
+			width:55%;
+		}
+	}
+}
+
+
+.pagination {
+	@include flexbox;
+	@include justify-content(flex-end);
+	width:100%;
+	margin-top:0.5rem;
+	nav{
+		text-align:right;
+		margin-right: 1rem;
+	}
+}
+
+.crud-toggle {
+	button {
+	@include border-radius(0.25rem);
+	padding:0.5rem;
+	}
+	margin-right:1rem;
+}
+
+
+
+.crud-slider {
+	width:1rem;
+	background:rgba(0,0,0,0.12);
+	flex:0 0 auto;
+	@include flexbox;
+	@include flex-direction;
+	@include justify-content(space-between);
+	cursor:col-resize;
+	min-height:200px;
+
+	i {
+		font-size:1rem;
+		color:$grey;
+		transform:rotateZ(90deg);
+		&:first-child{
+			margin-top:0.25rem;
+		}
+		&:last-child{
+			margin-bottom:0.25rem;
+		}
+
+	}
+}
+a {
+	color:$primary-color;
+	&:hover {
+		color:$primary-darker;
+	}
+}
+
+
+
+.crud-creation {
+	margin-top:1rem;
+	margin-right:1rem;
+	margin-left:auto;
+	margin-top:auto;
+
+}
+
+//Shame
+body{
+	@include flexbox;
+}
+.content{
+	width:100%;
+	box-sizing:content-box;
+}
+
+.details{
+	form{
+		max-width:50rem;
+	}
+}
+
+.full-width {
+	width:100%;
+	max-width:100%;
+}

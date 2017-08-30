@@ -1,0 +1,115 @@
+
+.wmapp-product-tour-container {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: "calc(100% + 31rem)";
+	height: 100%;
+	z-index: map-get($zindex, help );
+	background: url(../img/background.svg) no-repeat 0 center;
+	background-size: cover;
+	opacity: 0;
+	@include transform(0,0,0,$animation-duration-slow);
+
+	div {
+		height: 100%;
+		width: 100%;
+		outline: none;
+		z-index: map-get($zindex, help );
+	}
+	& > div {
+		width: "calc(100% - 31rem)";
+		@include transform(0,0,0,$animation-duration-slow);
+	}
+}
+
+.wmapp-product-tour {
+	.slick-slide {
+		font-size: 0.5rem;
+		color: $white;
+		text-align: center;
+
+		&:before {
+			content: '';
+			display: inline-block;
+			height: 100%;
+			vertical-align: middle;
+			font-size: 0;
+		}
+
+		span {
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		img {
+			display: block;
+			max-width: 31rem;
+			width: 100%;
+		}
+
+		p {
+			margin-top: 1.25rem;
+			text-align: center;
+		}
+
+		button {
+			display: block;
+			margin: 2rem auto;
+			background: $transparent;
+			@include border(2px, $white);
+			color: $white;
+			font-family: $font-semibold;
+			padding: 0.625rem 1.25rem;
+
+			.activated {
+				background: fade($white, 30%);
+			}
+		}
+	}
+}
+
+.wmapp-product-tour-indicators {
+	position: fixed;
+	left: 0;
+	bottom: 1.25rem;
+	width: 100%;
+	display: block;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+
+	li {
+		display: inline-block;
+		background-color: $transparent;
+		@include border(1px, $white);
+		@include border-radius(50%);
+		font-size: 0;
+		width: 0.625rem;
+		height: 0.625rem;
+		margin: 0.25rem;
+		@include transform(0,0,0,200ms);
+
+		&.current {
+			background-color: $primary;
+			@include border(1px, $primary);
+		}
+	}
+}
+
+.wmapp-product-tour-skip {
+	display: inline-block;
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: map-get($zindex, 5000 );
+	padding: 0.625rem;
+	margin: 0;
+	color: $white;
+	font-size: 0.75rem;
+
+	.activated {
+		background: fade($white, 30%);
+	}
+}

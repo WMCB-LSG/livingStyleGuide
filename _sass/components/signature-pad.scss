@@ -1,0 +1,159 @@
+.sigPad {
+    margin: 0;
+    padding: 0;
+
+    label {
+        &.error {
+            color: $red;
+        }
+    }
+
+    button {
+        margin: 1rem 0 0;
+        padding: 0.625rem 0.625rem 0.75rem;
+        background-color: $grey;
+        border: 0;
+        -moz-border-radius: 0.5rem;
+        -webkit-border-radius: 0.5rem;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        color: $font-color-primary;
+        font: bold 1rem/1.375 sans-serif;
+        text-align: left;
+
+        &:hover {
+            background-color: $grey-dark;
+            color: $white;
+        }
+    }
+}
+
+.sig {
+    display: none;
+}
+
+.sigNav {
+    display: none;
+    height: 2.25rem;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    list-style-type: none;
+
+    li {
+        display: inline;
+        float: left;
+        margin: 0;
+        padding: 0;
+    }
+
+    a {
+        display: block;
+        margin: 0;
+        padding: 0 0.625rem;
+        border: 0;
+        color: $font-color-primary;
+        font-weight: bold;
+        line-height: 2.25rem;
+        text-decoration: underline;
+
+        &:link,
+        &:visited {
+            display: block;
+            margin: 0;
+            padding: 0 0.625rem;
+            border: 0;
+            color: $font-color-primary;
+            font-weight: bold;
+            line-height: 2.25rem;
+            text-decoration: underline;
+        }
+
+        &.current,
+        &.current:link,
+        &.current:visited {
+            background-color: $grey;
+            @include border-radius(0.5rem 0.5rem 0 0);
+            color: $white;
+            text-decoration: none;
+        }
+    }
+
+    .typeIt {
+        a {
+            &.current,
+            &.current:link,
+            &.current:visited {
+                background-color: $grey;
+                color: $grey-dark;
+            }
+        }
+    }
+
+    .clearButton {
+        bottom: 0.25em;
+        display: none;
+        position: absolute;
+        right: 0;
+        font-size: 0.75em;
+        line-height: 1.375;
+    }
+}
+
+.sigWrapper {
+    clear: both;
+    @include border(1px, $grey);
+
+    &.current {
+        border-color: $grey-dark;
+    }
+}
+
+.signed {
+    .sigWrapper {
+        border: 0;
+    }
+}
+
+.pad {
+    position: relative;
+}
+
+.current {
+    .pad {
+        /**
+        * For cross browser compatibility, this should be an absolute URL
+        * In IE the cursor is relative to the HTML document
+        * In all other browsers the cursor is relative to the CSS file
+        *
+        * http://www.useragentman.com/blog/2011/12/21/cross-browser-css-cursor-images-in-depth/
+        */
+        cursor: url("../build/pen.cur"), crosshair;
+        /**
+        * IE will ignore this line because of the hotspot position
+        * Unfortunately we need this twice, because some browsers ignore the hotspot inside the .cur
+        */
+        cursor: url("pen.cur") 16 16, crosshair;
+    }
+}
+
+.typed {
+    height: 6rem;
+    margin: 0;
+    padding: 0 0.25rem;
+    position: absolute;
+    z-index: map-get($zindex, assist );
+    cursor: default;
+    color: $blue;
+    font: normal 1.875em/50px "Journal",Georgia,Times,serif;
+}
+
+.drawItDesc,
+.typeItDesc {
+    display: none;
+    margin: 0.75rem 0 0.5rem;
+    padding: 0.5rem 0 0;
+    border-top: 0.25rem solid $grey;
+    color: $black;
+    font: italic normal 1em/1.375 Georgia,Times,serif;
+}

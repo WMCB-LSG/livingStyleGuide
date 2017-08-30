@@ -1,0 +1,129 @@
+
+.wmapp-title-bar[data-tile="core_login_tile"],
+.wmapp-title-bar[data-tile="site_express_signup_tile"]
+{
+	display: none;
+}
+
+#wmappMobileTitle {
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 100%;
+	height: 3rem;
+	line-height: 2rem;
+	padding: 0.625rem 0;
+	margin: 0;
+	background: $primary;
+	color: $primary-font;
+	font-size: 1.25rem;
+	text-align: center;
+	z-index: map-get($zindex, assist );
+	box-sizing: border-box;
+	font-family: $font-semibold;
+
+	.wmapp-mobile-sync-progress {
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 0.125rem;
+		width: 0;
+		z-index: map-get($zindex, base);
+		background: $accent;
+		@include transform(0,0,0, $animation-duration-quick);
+	}
+
+	& > a {
+		position: absolute;
+		top: 0;
+		display: block;
+		width: 3rem;
+		height: 3rem;
+
+		&:active,
+		&.activated {
+			background-color: $primary-dark;
+		}
+
+		&.wmapp-mobile-back-button {
+			background:url(../img/back.svg) no-repeat center center;
+			background-size: 70%;
+			opacity: 1;
+
+			@include transform(0,0,0, $animation-duration-quick);
+			transition-property: opacity;
+			-webkit-transition-property: opacity;
+		}
+
+		&.wmapp-mobile-sync-button {
+			right: 3rem;
+			background:url(../img/sync-complete.svg) no-repeat center center;
+			background-size: 65%;
+
+			&.sync-required {
+				background:url(../img/sync-required.svg) no-repeat center center;
+				background-size: 65%;
+			}                                               
+			
+			&.sync-upload {
+				background:url(../img/sync-upload.svg) no-repeat center center;
+				background-size: 65%;
+			}
+			
+			&.sync-download {
+				background:url(../img/sync-download.svg) no-repeat center center;
+				background-size: 65%;
+			}
+			
+			&.sync-offline {
+				background:url(../img/sync-offline.svg) no-repeat center center;
+				background-size: 65%;
+			}
+		}
+
+		&.wmapp-mobile-menu {
+			right: 0;
+			background: url(../img/menu.svg) no-repeat center center;
+			background-size: 70%;
+		}
+
+		&.wmapp-mobile-online::before {
+			display:inline-block;
+			margin-left:0.625rem;
+			content:url('../img/connected.png');
+		}
+
+		&.wmapp-mobile-offline::before{
+			display:inline-block;
+			margin-left:0.625rem;
+			content:url('../img/disconnected.png');
+		}
+	}
+
+	& > span {
+		display: inline-block;
+		max-width: calc(100% - 9rem);
+		max-height: 2rem;
+		overflow: hidden;
+	}
+
+	&.can-go-back > a.back {
+		display: block;
+	}
+
+	&.offline {
+		background: $grey-dark;
+	}
+}
+
+
+#wmappMobileTitle > span {
+	font-size:1rem;
+	text-overflow: ellipsis;
+	width: 8rem;
+	height:2.5rem;
+	max-height:2.5rem;
+	line-height:1.2;
+	overflow:auto;
+}

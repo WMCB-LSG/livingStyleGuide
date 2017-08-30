@@ -1,0 +1,31 @@
+
+
+.crud-breadcrumb{
+    margin-left:0;
+	margin-bottom:0;
+	padding:0.5rem 1rem;
+    padding-right:5rem;
+    background-color:$white;
+    @include boxShadow(1px);
+    @include border(1px, rgba(0,0,0,0.24));
+	@include border-radius(0.5rem);
+    ul{
+        li{
+            &:last-of-type{
+                color:$grey-dark;
+            }
+        }
+    }
+}
+
+.breadcrumbs {
+    @include flexbox;
+    @include align-items;
+    border:none !important;
+    padding:0;
+    margin:0;
+    background-color:$transparent;
+    > * a {
+        line-height:1.5rem;
+    }
+}

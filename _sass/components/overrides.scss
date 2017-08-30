@@ -1,0 +1,180 @@
+@media only screen and (min-width: 64.063em) {
+    h1 {
+      font-size: 1.75rem;
+      line-height: 1.2;
+    }
+    h2 {
+      font-size: 1.25rem;
+      line-height: 1.2;
+    }
+    h3 {
+      font-size: 1.15rem;
+      line-height: 1.2;
+    }
+    h4 {
+      font-size: 1.05rem;
+      line-height: 1.2;
+    }
+    h5 {
+      font-size: 1.0rem;
+      line-height: 1.2;
+    }
+  }
+  select[disabled] {
+    background-color: rgb(221,221,221);
+    cursor: default;
+  }
+  select[multiple] {
+    height: auto;
+    padding-top: 0;
+  }
+  ul.wmapp-autocomplete {
+    display: none;
+    position: absolute;
+    background-color: rgb(248,248,248);
+    margin: 0;
+    padding: 0.25rem 0;
+    height: 15rem;
+    overflow: scroll;
+    z-index: 1;
+    width: auto !important;
+  }
+  ul.wmapp-autocomplete li {
+    list-style: none;
+    margin: 0;
+    padding: 0.25rem 0.5rem;
+  }
+  ul.wmapp-autocomplete li.active,
+  ul.wmapp-autocomplete li:active,
+  ul.wmapp-autocomplete li:hover {
+    cursor: pointer;
+    background-color: rgb(211,211,211);
+  }
+  ul.wmapp-autocomplete li a {
+    color: rgb(61,61,61);
+    text-decoration: none;
+  }
+  
+  .tooltip {
+    z-index: map-get($zindex, help );
+  }
+  ul[class^="large-block-grid-"] .wmapp-add-button,
+  ul[class^="medium-block-grid-"] .wmapp-add-button,
+  ul[class^="small-block-grid-"] .wmapp-add-button,
+  ul[class^="large-block-grid-"] .wmapp-clear-button,
+  ul[class^="medium-block-grid-"] .wmapp-clear-button,
+  ul[class^="small-block-grid-"] .wmapp-clear-button,
+  ul[class^="large-block-grid-"] .wmapp-delete-button,
+  ul[class^="medium-block-grid-"] .wmapp-delete-button,
+  ul[class^="small-block-grid-"] .wmapp-delete-button {
+    margin-top: 1.5rem;
+    padding: 0.5rem 1rem;
+  }
+  ul[class^="large-block-grid-"] input,
+  ul[class^="medium-block-grid-"] input,
+  ul[class^="small-block-grid-"] input,
+  ul[class^="large-block-grid-"] select,
+  ul[class^="medium-block-grid-"] select,
+  ul[class^="small-block-grid-"] select,
+  ul[class^="large-block-grid-"] textarea,
+  ul[class^="medium-block-grid-"] textarea,
+  ul[class^="small-block-grid-"] textarea {
+    margin: 0;
+  }
+  ul[class^="large-block-grid-"] li,
+  ul[class^="medium-block-grid-"] li,
+  ul[class^="small-block-grid-"] li {
+    padding: 0 0.125rem 0.25rem;
+  }
+  ul[class^="large-block-grid-"] input[type="checkbox"],
+  ul[class^="medium-block-grid-"] input[type="checkbox"],
+  ul[class^="small-block-grid-"] input[type="checkbox"],
+  ul[class^="large-block-grid-"] input[type="radio"],
+  ul[class^="medium-block-grid-"] input[type="radio"],
+  ul[class^="small-block-grid-"] input[type="radio"] {
+    height: 2.5rem;
+  }
+  ul[class^="large-block-grid-"] label,
+  ul[class^="medium-block-grid-"] label,
+  ul[class^="small-block-grid-"] label {
+    font-size: 0.75rem;
+  }
+  ul[class^="large-block-grid-"] span.has-tip.tip-right:after,
+  ul[class^="medium-block-grid-"] span.has-tip.tip-right:after,
+  ul[class^="small-block-grid-"] span.has-tip.tip-right:after {
+    margin: 0.25rem;
+  }
+  table.wmapp-table ul[class^="small-block-grid-"] div.wmapp-file-field,
+  ul[class^="large-block-grid-"] div.wmapp-file-field,
+  ul[class^="medium-block-grid-"] div.wmapp-file-field {
+    position: relative;
+  }
+  table.wmapp-table ul[class^="small-block-grid-"] div.wmapp-file-field span,
+  ul[class^="large-block-grid-"] div.wmapp-file-field span,
+  ul[class^="medium-block-grid-"] div.wmapp-file-field span {
+    font-size: 0.75rem;
+  }
+  table.wmapp-table ul[class^="small-block-grid-"] div.wmapp-file-field input.wmapp-file-field,
+  ul[class^="large-block-grid-"] div.wmapp-file-field input.wmapp-file-field,
+  ul[class^="medium-block-grid-"] div.wmapp-file-field input.wmapp-file-field {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 1.25rem;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+  }
+  ul.large-block-grid-3 li.double,
+  ul.medium-block-grid-3 li.double {
+    width: 66.6666%;
+  }
+  ul.large-block-grid-4 li.double,
+  ul.medium-block-grid-4 li.double {
+    width: 50%;
+  }
+  ul.large-block-grid-5 li.double,
+  ul.medium-block-grid-5 li.double {
+    width: 40%;
+  }
+  ul.large-block-grid-6 li.double,
+  ul.medium-block-grid-6 li.double {
+    width: 33.3333%;
+  }
+  ul.large-block-grid-7 li.double,
+  ul.medium-block-grid-7 li.double {
+    width: 28.5714%;
+  }
+  ul.large-block-grid-8 li.double,
+  ul.medium-block-grid-8 li.double {
+    width: 25%;
+  }
+  ul.large-block-grid-9 li.double,
+  ul.medium-block-grid-9 li.double {
+    width: 22.2222%;
+  }
+  ul.large-block-grid-10 li.double,
+  ul.medium-block-grid-10 li.double {
+    width: 20%;
+  }
+  ul.large-block-grid-11 li.double,
+  ul.medium-block-grid-11 li.double {
+    width: 18.18182%;
+  }
+  ul.large-block-grid-12 li.double,
+  ul.medium-block-grid-12 li.double {
+    width: 16.6666%;
+  }
+  @media only screen and (min-width: $large-screen) {
+    /** Hide labels for large screen **/
+    .wmapp-table-list > div div:nth-child(n+2) label {
+      display: none;
+    }
+    .wmapp-table-list > div div:nth-child(n+2) ul[class^="large-block-grid-"] .wmapp-delete-button,
+    .wmapp-table-list > div div:nth-child(n+2) ul[class^="medium-block-grid-"] .wmapp-delete-button,
+    .wmapp-table-list > div div:nth-child(n+2) ul[class^="small-block-grid-"] .wmapp-delete-button {
+      margin-top: 0.125rem;
+    }
+  }

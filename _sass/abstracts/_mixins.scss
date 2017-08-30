@@ -2,9 +2,6 @@
 // or consistant patterns like borders for particular components. Like variables, if you find yourself writing code over and over
 // make it into a mixin.
 
-
-
-
 //Flexbox
 @mixin flexbox {
   display: -webkit-box;
@@ -22,7 +19,7 @@
 
 }
 
-@mixin align-items($value) {
+@mixin align-items($value: center) {
   -webkit-align-items: $value;
   -ms-align-items: $value;
   -moz-align-items: $value;
@@ -30,7 +27,7 @@
 
 }
 
-@mixin justify-content($value) {
+@mixin justify-content($value: center) {
   -webkit-justify-content: $value;
   -ms-justify-content: $value;
   -moz-justify-content: $value;
@@ -46,7 +43,7 @@
   order: $value;
 }
 
-@mixin align-self($value) {
+@mixin align-self($value: center) {
   -webkit-align-self: $value;
   -ms-align-self: $value;
   -moz-align-self: $value;
@@ -61,26 +58,12 @@
   flex-wrap: $value;
 }
 
-@mixin flex-grow($value: 0) {
-  -webkit-flex-grow: $value;
-  -ms-flex-grow: $value;
-  -moz-flex-grow: $value;
-  flex-grow: $value;
-}
-
-@mixin flex-shrink($value: 0) {
-  -webkit-flex-shrink: $value;
-  -ms-flex-shrink: $value;
-  -moz-flex-shrink: $value;
-  flex-shrink: $value;
-}
-
 // Borders
 
-@mixin border($thickness:1px, $color: rgba(0,0,0,0.12) ) {
+@mixin border($thickness:1px, $color: $black) {
     border: $thickness solid $color;
 }
-@mixin border-radius($radius) {
+@mixin border-radius($radius: $base-border-radius) {
     -moz-border-radius:$radius;
     -webkit-border-radius:$radius;
     border-radius:$radius;
@@ -93,6 +76,21 @@
     }
 }
 
+@mixin media-query-height($device) {
+	@if $device == $maxIphone5 {
+		@media screen and (max-height: $device) {
+			@content;
+		}
+	} @if $device == $minIphone5 {
+		@media screen and (min-height: $device) {
+			@content;
+		}
+	} @else {
+		@media screen and (min-height: $device) {
+			@content;
+		}
+	}
+}
 
 //Gradients
 
@@ -108,19 +106,148 @@
 }
 
 // Shadows
-
-// @mixin bigShadow {
-// box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.12), 0px 4px 4px 0px rgba(0,0,0,0.24);
-// }
-// @mixin smallShadow {
-// box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.12), 0px 2px 2px 0px rgba(0,0,0,0.24);
-// }
-// @mixin linkShadow {
-// box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.12), 0px 8px 8px 0px rgba(0,0,0,0.24);
-// }
-
 @mixin boxShadow($shadow) {
     -moz-box-shadow: 0px 0px $shadow 0px rgba(0,0,0,0.12), 0px $shadow $shadow 0px rgba(0,0,0,0.24);
     -webkit-box-shadow: 0px 0px $shadow 0px rgba(0,0,0,0.12), 0px $shadow $shadow 0px rgba(0,0,0,0.24);
     box-shadow: 0px 0px $shadow 0px rgba(0,0,0,0.12), 0px $shadow $shadow 0px rgba(0,0,0,0.24);
 }
+
+
+// 3D transform
+@mixin trans3d($important: !important, $tx:0, $ty:0, $tz:0) {
+  transform: translate3d($tx, $ty, $tz) $important;
+  -ms-transform: translate3d($tx, $ty, $tz) $important;
+  -webkit-transform: translate3d($tx, $ty, $tz) $important;
+  -moz-transform: translate3d($tx, $ty, $tz) $important;
+  -o-transform: translate3d($tx, $ty, $tz) $important;
+}
+
+
+@mixin disable-select {
+	-webkit-touch-callout: none;
+
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+	user-drag: none;
+	-webkit-user-drag: none;
+
+	tap-highlight-color: $transparent;
+	-webkit-tap-highlight-color: $transparent;
+
+	touch-callout: none;
+	-webkit-touch-callout: none;
+}
+
+@mixin enable-select {
+	-webkit-touch-callout: initial;
+
+	-webkit-user-select: initial;
+	-khtml-user-select: initial;
+	-moz-user-select: initial;
+	-ms-user-select: initial;
+	user-select: initial;
+
+	user-drag: none;
+	-webkit-user-drag: initial;
+
+	tap-highlight-color: initial;
+	-webkit-tap-highlight-color: initial;
+
+	touch-callout: initial;
+	-webkit-touch-callout: initial;
+}
+
+
+@mixin transform($x: 0, $y: 0, $z: 0, $duration: $animation-duration, $scale: 1) {
+	-webkit-transform: translate3d($x, $y, $z) scale($scale);
+	-moz-transform: translate3d($x, $y, $z) scale($scale);
+	-o-transform: translate3d($x, $y, $z) scale($scale);
+	-ms-transform: translate3d($x, $y, $z) scale($scale);
+	transform: translate3d($x, $y, $z) scale($scale);
+
+	-webkit-transition-duration: $duration;
+	-moz-transition-duration: $duration;
+	-o-transition-duration: $duration;
+	-ms-transition-duration: $duration;
+	transition-duration: $duration;
+
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-o-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	backface-visibility: hidden;
+
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	-o-box-shadow: none;
+	-ms-box-shadow: none;
+	box-shadow: none;
+}
+
+@mixin transform-timing($timing: ease) {
+	-webkit-transition-timing-function: $timing;
+	-moz-transition-timing-function: $timing;
+	-o-transition-timing-function: $timing;
+	-ms-transition-timing-function: $timing;
+	transition-timing-function: $timing;
+}
+
+@mixin filter($filter) {
+	-webkit-filter: $filter;
+	-moz-filter:$filter;
+	-o-filter: $filter;
+	-ms-filter: $filter;
+	filter: $filter;
+}
+
+
+//ANIMATIONS
+
+@-webkit-keyframes rotating /* Safari and Chrome */ {
+	from {
+		-ms-transform: rotate(0deg);
+		-moz-transform: rotate(0deg);
+		-webkit-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	to {
+		-ms-transform: rotate(360deg);
+		-moz-transform: rotate(360deg);
+		-webkit-transform: rotate(360deg);
+		-o-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+@keyframes rotating {
+	from {
+		-ms-transform: rotate(0deg);
+		-moz-transform: rotate(0deg);
+		-webkit-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	to {
+		-ms-transform: rotate(360deg);
+		-moz-transform: rotate(360deg);
+		-webkit-transform: rotate(360deg);
+		-o-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+
+@-webkit-keyframes pulse {
+	0% { -webkit-transform: scale(1); }
+	50% { -webkit-transform: scale(0.9); }
+	100% { -webkit-transform: scale(1); }
+}
+@keyframes pulse {
+	0% { -webkit-transform: scale(1); }
+	50% { -webkit-transform: scale(0.9); }
+	100% { -webkit-transform: scale(1); }
+}
+

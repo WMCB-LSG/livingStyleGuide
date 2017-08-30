@@ -1,0 +1,716 @@
+.button,
+button {
+    padding: 0.5rem 1rem 0.5625rem;
+    line-height:2;
+
+    &.small {
+        padding: 0.475rem 1.15rem 0.5375rem;
+        margin-bottom: 0.2rem;
+    }
+}
+
+.button {
+    &.small {
+        &.image {
+            background-color: transparent;
+            padding: 0.2rem;
+            height: 1.875rem;
+        }
+    }
+}
+
+
+@import "../elements/button.scss";
+
+.wmapp-email-button {
+    &.image {
+        content: url('../img/buttons/email.png');
+    }
+}
+
+.wmapp-edit-button {
+    &.image {
+        content: url('../img/buttons/edit.png');
+    }
+}
+/* Button-text */
+.wmapp-button-back,
+.wmapp-button-cancel,
+.wmapp-button-capabilities,
+.wmapp-button-create,
+.wmapp-button-delete-multiple,
+.wmapp-button-export,
+.wmapp-button-import,
+.wmapp-button-next,
+.wmapp-button-promote,
+.wmapp-button-search,
+.wmapp-button-search-reset,
+.wmapp-button-submit {
+    &:before {
+        content: '';
+        display: inline-block;
+        width: $button-image-size;
+        height: $button-image-size;
+        background: url("../../../img/edit.svg") no-repeat center;
+        background-size: 100% !important;
+        vertical-align: middle;
+        margin-right: 0.625rem;
+    }
+}
+
+.wmapp-button-create {
+    &:before {
+        background: url("../../img/add.svg") no-repeat center center;
+    }
+}
+
+.wmapp-button-delete-multiple {
+    &:before {
+        background: url("../../../img/delete.svg") no-repeat center;
+    }
+}
+
+.wmapp-button-import {
+    &:before {
+        background: url("../../img/import.svg") no-repeat center center;
+    }
+}
+
+.wmapp-button-export {
+    &:before {
+        background: url("../../img/export.svg") no-repeat center center;
+    }
+}
+
+.wmapp-button-promote {
+    &:before {
+        background: url("../../img/promote.svg") no-repeat center center;
+    }
+}
+
+.wmapp-button-search {
+    &:before {
+        background: url("../../../img/search.svg") no-repeat center;
+    }
+}
+
+.wmapp-button-search-reset {
+    &:before {
+        background: url("../../../img/refresh.svg") no-repeat center;
+    }
+}
+
+.wmapp-button-cancel {
+    &:before {
+        background: url("../../../img/cancel.svg") no-repeat center;
+    }
+}
+
+.wmapp-button-back {
+    &:before {
+        background: url("../../../img/back.svg") no-repeat center;
+    }
+}
+
+.wmapp-button-next {
+    &:before {
+        background: url("../../../img/next.svg") no-repeat center;
+    }
+}
+
+.wmapp-button-reminder {
+    &:before {
+        background: url("../../../img/reminder.svg") no-repeat center;
+    }
+}
+
+.wmapp-button-capabilities-workflow {
+    &:before {
+        background: url("/img/buttons/capability-workflow.svg") no-repeat center;
+    }
+}
+
+.wmapp-button-capabilities-documents {
+    &:before {
+        background: url("/img/buttons/capability-documents.svg") no-repeat center;
+    }
+}
+/* Button icons */
+.wmapp-button-icon {
+    &.wmapp-button-add-step,
+    &.wmapp-button-clear-step,
+    &.wmapp-button-cost,
+    &.wmapp-button-delete,
+    &.wmapp-button-delete-step,
+    &.wmapp-button-details,
+    &.wmapp-button-download,
+    &.wmapp-button-edit,
+    &.wmapp-button-edit-content,
+    &.wmapp-button-edit-transitions,
+    &.wmapp-button-email,
+    &.wmapp-button-publish,
+    &.wmapp-button-reminder,
+    &.wmapp-button-timeline,
+    &.wmapp-button-versions,
+    &.wmapp-button-view-files,
+    &.wmapp-button-view-submissions,
+    &.wmapp-button-workflow {
+        font-size: 0 !important;
+        height: 1.5rem;
+        width: 1.5rem;
+        background: url("../../img/edit.svg") no-repeat center center;
+        background-size: auto 70%;
+        padding: 0.25rem !important;
+        box-sizing: content-box;
+        vertical-align: bottom;
+    }
+
+    &.wmapp-button-edit {
+        &:hover {
+            background-color: rgb(0,174,239);
+        }
+    }
+
+    &.wmapp-button-delete {
+        background: url("../../img/delete.svg") no-repeat center center;
+        background-size: auto 70%;
+    }
+
+    &.wmapp-button {
+        &:hover {
+            background-color: opacify($red, 0.5);
+        }
+    }
+
+    &.wmapp-button-email {
+        background: url("../../img/email.svg") no-repeat center center;
+        background-size: auto 95%;
+
+        &:hover {
+            background-color: opacify($teal, 0.5);
+        }
+    }
+
+    &.wmapp-button-cost {
+        background: url("../../img/cost.svg") no-repeat center center;
+        background-size: auto 70%;
+
+        &:hover {
+            background-color: opacify($teal, 0.5);
+        }
+    }
+
+    &.wmapp-button-timeline {
+        background: url("../../img/timeline.svg") no-repeat center center;
+        background-size: auto 70%;
+
+        &:hover {
+            background-color: opacify($maroon, 0.5);
+        }
+    }
+
+    &.wmapp-button-workflow {
+        background: url("../../img/workflow.svg") no-repeat center center;
+        background-size: auto 70%;
+
+        &:hover {
+            background-color: opacify($green, 0.5);
+        }
+    }
+
+    &.wmapp-button-view-files,
+    &.wmapp-button-view-submissions {
+        background: url("../../img/submissions.svg") no-repeat center center;
+        background-size: auto 90%;
+
+        &:hover {
+            background-color: opacify($green, 0.5);
+        }
+    }
+
+    &.wmapp-button-versions {
+        background: url("../../img/versions.svg") no-repeat center center;
+        background-size: auto 90%;
+
+        &:hover {
+            background-color: opacify($teal, 0.5);
+        }
+    }
+
+    &.wmapp-button-publish {
+        background: url("../../img/versions.svg") no-repeat center center;
+        background-size: auto 90%;
+
+        &:hover {
+            background-color: opacify($maroon, 0.5);
+        }
+    }
+
+    &.wmapp-button-edit-content {
+        background: url("../../img/content.svg") no-repeat center center;
+        background-size: auto 90%;
+
+        &:hover {
+            background-color: opacify($maroon, 0.5);
+        }
+    }
+
+    &.wmapp-button-details {
+        background: url("../../img/search.svg") no-repeat center center;
+        background-size: auto 90%;
+
+        &:hover {
+            background-color: opacify($maroon, 0.5);
+        }
+    }
+
+    &.wmapp-button-add-step {
+        background: url("../../img/add.svg") no-repeat center center;
+        background-size: auto 90%;
+        margin-top: 1.75rem;
+
+        &:hover {
+            background-color: opacify($maroon, 0.5);
+        }
+    }
+
+    &.wmapp-button-clear-step {
+        background: url("../../img/clear.svg") no-repeat center center;
+        background-size: auto 90%;
+        margin-top: 1.75rem;
+        &:hover {
+            background-color: opacify($maroon, 0.5);
+        }
+    }
+
+    &.wmapp-button-delete-step {
+        background: url("../../img/remove.svg") no-repeat center center;
+        background-size: auto 90%;
+        margin-top: 1.75rem;
+
+        &:hover {
+            background-color: opacify($maroon, 0.5);
+        }
+    }
+
+    &.wmapp-button-edit-transitions {
+        background: url("/img/arrow_down.svg") no-repeat center center;
+        background-size: auto 90%;
+
+        &:hover {
+            background-color: opacify($maroon, 0.5);
+        }
+    }
+
+    &.wmapp-button-reminder {
+        background: url("../../img/reminder.svg") no-repeat center center;
+        background-size: auto 90%;
+
+        &:hover {
+            background-color: opacify($maroon, 0.5);
+        }
+    }
+
+    &.wmapp-button-download {
+        background: url("../../img/download.svg") no-repeat center center;
+        background-size: auto 90%;
+
+        &:hover {
+            background-color: opacify($maroon, 0.5);
+        }
+    }
+}
+/* Dashboard Buttons */
+ul {
+    &.wmapp-button-group-dashboard {
+        text-align: center;
+
+        li {
+            margin-right: 0.625rem;
+
+            .wmapp-button-dashboard-graph-type {
+                width: 3.5rem;
+                height: 3.5rem;
+                background: transparent no-repeat center 70%;
+
+                &:hover {
+                    background-color: $grey-light;
+                    background-size: 80%;
+                }
+            }
+        }
+
+        .button,
+        button {
+            &:hover {
+                background-color: opacify($grey-dark, 0.2) !important;
+            }
+        }
+    }
+}
+
+.wmapp-button-dashboard-graph-type-bar {
+    background-image: url("/img/dashboard/bar_chart.png");
+}
+
+.wmapp-button-dashboard-graph-type-line {
+    background-image: url("/img/dashboard/line_chart.png");
+}
+
+.wmapp-button-dashboard-graph-type-radar {
+    background-image: url("/img/dashboard/radar_chart.png");
+}
+
+.wmapp-button-dashboard-graph-type-polar {
+    background-image: url("/img/dashboard/polar_chart.png");
+}
+
+.wmapp-button-dashboard-graph-type-pie {
+    background-image: url("/img/dashboard/pie_chart.png");
+}
+
+.wmapp-button-dashboard-graph-type-doughnut {
+    background-image: url("/img/dashboard/doughnut_chart.png");
+}
+
+.wmapp-button-dashboard-back-to-graph {
+    background-image: url("/img/dashboard/view.svg");
+}
+
+.wmapp-button-dashboard-export-csv {
+    background-image: url("/img/dashboard/excel.svg");
+}
+/* Button Capabilities */
+.wmapp-button-group-capabilities {
+    text-align: center;
+
+    li {
+        margin-right: 0.625rem;
+    }
+}
+
+.wmapp-button-capability {
+    display: inline-block;
+    width: 2rem;
+    padding: 0.625rem;
+    height: 2rem;
+    background-repeat: no-repeat;
+    background-size: calc(100% - 1.25rem);
+    background-position: center;
+    float: right;
+    box-sizing: content-box;
+
+    &.activated {
+        border-radius: 0.25rem;
+    }
+}
+
+.wmapp-button-workflow {
+    background-image: url("../img/workflow.svg");
+
+    &.activated {
+        background-color: opacify($green, 0.5);
+    }
+}
+
+.wmapp-button-cost {
+    background-image: url("../img/cost.svg");
+
+    &.activated {
+        background-color: opacify($teal, 0.5);
+    }
+}
+
+.wmapp-button-timeline {
+    background-image: url("../img/timeline.svg");
+
+    &.activated {
+        background-color: opacify($maroon, 0.5);
+    }
+}
+
+.wmapp-button-documents {
+    background-image: url("../img/documents.svg");
+
+    &.activated {
+        background-color: opacify($teal, 0.5);
+    }
+}
+//Foundation Topbar
+.wmapp-menu-buttons {
+    background-color: rgb(51,51,51);
+    width: 100%;
+  }
+  .wmapp-menu-buttons ul {
+    text-align: center;
+  }
+  .wmapp-menu-buttons ul li {
+    display: inline-block;
+    float: none;
+  }
+  .wmapp-menu-buttons ul li > a {
+    font-size: 0.875rem;
+  }
+  .wmapp-menu-buttons ul li > a.button {
+    font-size: 0.875rem;
+  }
+  .wmapp-menu-buttons ul ul li > a {
+    font-size: 0.875rem;
+  }
+
+
+// Mobile Button Style 
+
+// .button-group {
+// 	text-align: center;
+
+// 	> li {
+// 		.button,
+// 		> button {
+// 			border: none;
+// 			margin: 0.625rem;
+// 		}
+// 	}
+// }
+
+// button,
+// .button,
+// a.button {
+// 	transition: initial;
+// 	-webkit-transition: initial;
+// 	background-color: $accent;
+// 	color: $accent-font;
+// 	padding: 0.5rem 1.25rem;
+// 	outline: none;
+// 	@include border-radius;
+
+// 	&.activated,
+// 	&:hover,
+// 	&:active {
+// 		background-color: $secondary;
+// 		color: $secondary-font;
+// 	}
+
+// 	&.success {
+// 		&:hover,
+// 		&:focus {
+// 			background-color: $primary;
+// 		  	border: none;
+// 		  	color: $white;
+// 			font-size: 1rem;
+// 			padding: 0.5rem 1.25rem;
+// 		}
+
+// 		&.activated,
+// 		&:active {
+// 			background: $primary-dark;
+// 		}
+// 	}
+// }
+
+// .wmapp-promote-button,
+// .wmapp-cancel-button {
+// 	display: none;
+// }
+
+// a.wmapp-back-button.button.small {
+// 	background-color: $white;
+//   	border-color: $white;
+// 	font-size: 1rem;
+// 	color: $grey;
+
+// 	span {
+// 		color: $primary;
+// 	}
+// }
+
+// .wmapp-search-button {
+// 	&,
+// 	&:focus,
+// 	&:hover {
+// 		background-color: $accent;
+// 		background-image: url(../img/search.svg);
+// 		background-repeat: no-repeat;
+// 		background-position: 0.625rem center;
+// 		background-size: auto 70%;
+// 		padding: 0.5rem 1.25rem 0.5rem 2.5rem;
+// 		color: $accent-font;
+// 	}
+
+// 	&.activated,
+// 	&:active {
+// 		background-color: opacify($accent, 0.5);
+// 	}
+// }
+
+// .wmapp-search-reset-button {
+// 	&,
+// 	&:focus,
+// 	&:hover {
+// 		background-color: $secondary;
+// 		background-image: url(../img/reset.svg);
+// 		background-repeat: no-repeat;
+// 		background-position: 0.625rem center;
+// 		background-size: auto 70%;
+// 		padding: 0.5rem 1.25rem 0.5rem 2.5rem;
+// 		color: $secondary-font;
+// 	}
+
+// 	&.activated,
+// 	&:active {
+// 		background-color: opacify($secondary, 0.5);
+// 	}
+// }
+
+// .wmapp-create-button {
+// 	&,
+// 	&:focus,
+// 	&:hover,
+// 	&.button,
+// 	&.button:focus,
+// 	&.button:hover {
+// 		background-color: $accent;
+// 		background-image: url(../img/create.svg);
+// 		background-repeat: no-repeat;
+// 		background-position: 0.625rem center;
+// 		background-size: auto 70%;
+// 		padding: 0.5rem 1.25rem 0.5rem 2.5rem;
+// 		color: $accent-font !important;
+// 	}
+
+// 	&.activated,
+// 	&.button.activated {
+// 		background-color: opacify($accent, 0.5);
+// 	}
+// }
+
+// .wmapp-list .wmapp-create-button {
+// 	position: absolute;
+// 	top: 0;
+// 	left: 0;
+// 	width: 100vw;
+// 	background-image: url(../img/create_white.svg);
+// 	background-color: $accent;
+// 	margin: 0 !important;
+// 	color: $accent-font !important;
+// 	@include border-radius;
+// }
+
+// .wmapp-commands {
+// 	margin-top: 2rem;
+// }
+
+// .wmapp-submit-button {
+// 	&,
+// 	&:focus,
+// 	&:hover {
+// 		background-color: $accent;
+// 		background-image: url(../img/tick_white.svg);
+// 		background-repeat: no-repeat;
+// 		background-position: 0.625rem center;
+// 		background-size: auto 70%;
+// 		padding: 0.5rem 1.25rem 0.5rem 2.5rem;
+// 		color: $accent-font;
+// 	}
+
+// 	&.activated,
+// 	&:active {
+// 		background-color: opacify($accent, 0.5);
+// 	}
+// }
+
+
+// .wmapp-add-button.button.small {
+// 	&.edit,
+// 	&.secondary {
+// 		padding: 20px 30px;
+// 		background-image: url(../img/create.svg);
+// 		background-size: auto 70%;
+// 		background-position: center;
+// 		background-repeat: no-repeat;
+// 		margin: 5px;
+
+// 		i {
+// 			display: none;
+// 		}
+// 	}
+
+// 	&.secondary {
+// 		background-image: url(../img/remove.svg);
+// 	}
+// }
+
+
+// .wmapp-button-icon {
+// 	background-position: center;
+// 	background-size: contain;
+// 	background-repeat: no-repeat;
+// }
+
+// .wmapp-button-email {
+// 	background-image: url(../img/email.svg);
+// }
+
+// .wmapp-button-edit {
+// 	background-image: url(../img/edit.svg);
+// }
+
+// .wmapp-button-add-step {
+// 	background-image: url(../img/create.svg);
+// }
+
+// .wmapp-button-clear-step {
+// 	background-image: url(../img/remove.svg);
+// }
+
+// .wmapp-button-delete-step {
+// 	background-image: url(../img/delete.svg);
+// }
+
+// // Mobile Loading button 
+
+// button.loading,
+// a.button.loading {
+// 	&:hover {
+// 		padding-right: 2.5rem;
+// 	}
+
+// 	&:after {
+// 		display: block;
+// 		content: ' ';
+// 		position: absolute;
+// 		right: 0.25rem;
+// 		top: 0;
+// 		width: 2rem;
+// 		height: 100%;
+// 		background: url(../img/loading.svg) no-repeat center;
+// 		background-size: auto 70%;
+
+// 		-webkit-animation: rotating 2s linear infinite;
+// 		-moz-animation: rotating 2s linear infinite;
+// 		-ms-animation: rotating 2s linear infinite;
+// 		-o-animation: rotating 2s linear infinite;
+// 		animation: rotating 2s linear infinite;
+// 	}
+// }
+
+// .wmapp-combo-buttons {
+// 	> div {
+// 		overflow: hidden;
+//         @include border(1px, $white);
+//         @include border-radius;
+//         @include flexbox;
+// 		> button {
+// 			border: none;
+// 			flex-grow: 1;
+// 			background: none;
+// 			color: $white;
+// 			margin: 0;
+// 			@include border-radius(0);
+// 			&.selected {
+// 				background: $white;
+// 				color: $black;
+// 			}
+// 		}
+// 	}
+// }

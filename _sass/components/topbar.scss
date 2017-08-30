@@ -1,0 +1,53 @@
+.wmapp-menu-buttons {
+    text-align: center;
+    background-color: $grey-dark;
+    width: 100%;
+}
+
+.top-bar {
+    &-section {
+        font-size: 0.875rem;
+
+        ul {
+            li {
+                > a {
+                    font-size: 0.875rem;
+
+                    &.button {
+                        font-size: 0.875rem;
+                    }
+                }
+            }
+
+            ul {
+                li {
+                    > a {
+                        font-size: 0.875rem;
+                    }
+                }
+            }
+
+            &.wmapp-menu-buttons {
+                li {
+                    display: inline-block;
+                    float: none;
+                }
+            }
+        }
+    }
+
+    .name {
+        h1 {
+            a {
+                font-size: inherit;
+                line-height: inherit;
+            }
+        }
+    }
+
+    > ul {
+        > .name-divider {
+            border-right: 1px solid $white;
+        }
+    }
+}

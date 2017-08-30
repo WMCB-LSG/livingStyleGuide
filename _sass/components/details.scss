@@ -1,0 +1,276 @@
+.wmapp-details-image {
+    width: calc(100% + 2.5rem);
+    max-height: 20rem;
+    overflow: hidden;
+    margin: -1.25rem 0 0 -1.25rem;
+    text-align: center;
+    background: $grey;
+
+    img {
+        width: 100%;
+    }
+}
+
+.wmapp-details-attributes {
+    .row {
+        > div {
+            > span {
+                font-family: "opensans-semibold";
+            }
+        }
+    }
+
+    .wmapp-edit-button {
+        background-image: url("../img/edit.svg");
+
+        &.activated {
+            background-color: fade($maroon, 50%);
+        }
+    }
+}
+
+.wmapp-details-associations {
+    margin: 1.25rem 0 0 -1.25rem;
+    width: calc(100% + 2.5rem);
+
+    .tabs {
+        border-bottom: 1px solid $grey;
+
+        .tabs-title {
+            position: relative;
+            float: left;
+
+            > a {
+                padding: 0.25rem 1.25rem;
+                background-color: $white;
+                outline: none;
+            }
+
+            &.active {
+                &:after {
+                    content: ' ';
+                    display: block;
+                    position: absolute;
+                    width: 100%;
+                    height: 2px;
+                    background: lighten($red, 40%);
+                    bottom: 0;
+                }
+            }
+        }
+    }
+
+    .tabs-content {
+        padding: 0 1.25rem;
+
+        > .content {
+            padding: 0;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+
+            > li {
+                &:last-child {
+                    border-bottom: none;
+                }
+            }
+        }
+
+        li {
+            display: block;
+            border-bottom: 1px solid $grey;
+        }
+    }
+}
+
+// Mobile Details Style 
+
+.wmapp-details-image {
+	width: "calc(100% + 2.5rem)";
+	max-height: 20rem;
+	overflow: hidden;
+	margin: -1.25rem 0 0 -1.25rem;
+	text-align: center;
+	background: $grey;
+
+	img {
+		width: 100%;
+	}
+}
+
+.wmapp-details-attributes .row > div > span {
+	font-family: $font-semibold;
+}
+
+.wmapp-details-associations {
+	margin: 1.25rem 0 0 -1.25rem;
+	width: "calc(100% + 2.5rem)";
+
+	.tabs {
+		border-bottom: 1px solid $grey;
+
+		.tab-title {
+			position: relative;
+
+			&.active:after {
+				content: ' ';
+				display: block;
+				position: absolute;
+				width: 100%;
+				height: 0.125rem;
+				background: $secondary;
+				bottom: 0;
+			}
+
+			& > a {
+				padding: 0.25rem 1.25rem;
+				background-color: $white;
+				outline: none;
+			}
+		}
+	}
+
+	.tabs-content {
+		padding: 0 1.25rem;
+
+		.content {
+			padding: 0;
+
+			& > div {
+				& > ul {
+					list-style-type: none;
+					padding: 0;
+					margin: 0;
+
+					& > li {
+						display: block;
+						border-bottom: 1px solid $grey;
+
+						&:last-child {
+							border-bottom: none;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.wmapp-capabilities {
+	width: "calc(100% + 1.25rem)";
+	margin-left: -0.625rem;
+}
+
+.wmapp-button-capability {
+	display: inline-block;
+	width: 2rem;
+	padding: 0.625rem;
+	height: 2rem;
+	background-repeat: no-repeat;
+	background-size: "calc(100% - 1.25rem)";
+	background-position: center;
+	float: right;
+	box-sizing: content-box;
+
+	&.activated {
+		@include border-radius;
+	}
+}
+
+.wmapp-edit-button {
+	float: left;
+	background-image: url(../img/edit.svg);
+
+	&.activated {
+		background-color: rgba(196, 16, 52, 0.5);
+	}
+}
+
+.wmapp-workflow-button {
+	background-image: url(../img/workflow.svg);
+
+	&.activated {
+		background-color: fade($accent, 50%);
+	}
+}
+.wmapp-cost-button {
+	background-image: url(../img/cost.svg);
+
+	&.activated {
+		background-color: fade($accent, 50%);
+	}
+}
+
+.wmapp-timeline-button {
+	background-image: url(../img/timeline.svg);
+
+	&.activated {
+		background-color: fade($accent, 50%);
+	}
+}
+
+.wmapp-documents-button {
+	background-image: url(../img/documents.svg);
+	&.activated {
+		background-color: fade($accent, 50%);
+	}
+}
+
+a.wmapp-entity-associations-collection-item {
+	color: inherit;
+	display: block;
+	width: 100%;
+	background-image: url(../img/forward.svg);
+	background-repeat: no-repeat;
+	background-size: auto 50%;
+	background-position: center right;
+	padding: 10px 32px 10px 0;
+
+	&.activated {
+		background-color: $accent;
+		color: $accent-font;
+		@include border-radius;
+	}
+}
+
+.wmapp-list-frontend {
+	& > div > div {
+		text-align: center;
+	}
+
+	ul {
+		list-style-type: none;
+
+		li {
+			a.wmapp-entity-associations-collection-item {
+				border-bottom: 1px solid $grey;
+				border-top: 1px solid $grey;
+				margin-top: -1px;
+				border-collapse: collapse;
+			}
+
+			&:first-child a.wmapp-entity-associations-collection-item {
+				border-top: none;
+				margin-top: 0;
+			}
+			&:last-child a.wmapp-entity-associations-collection-item {
+				border-bottom: none;
+			}
+		}
+
+		.button-group {
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 6rem;
+		}
+	}
+}
+
+.wmapp-search .button-group button {
+	margin:0.625rem;
+	margin-top:1.25rem;
+}

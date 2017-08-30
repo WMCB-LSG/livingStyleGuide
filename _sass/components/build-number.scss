@@ -1,0 +1,10 @@
+.wmapp-build-number {
+	font-size: 0.625rem;
+	color: $white;
+	text-align: center;
+	margin-top: 0.625rem;
+
+	&:before {
+		content: 'v';
+	}
+}

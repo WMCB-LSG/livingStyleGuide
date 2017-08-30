@@ -1,0 +1,180 @@
+.wmapp-menu {
+  margin: 0;
+  padding: 3rem 0 0;
+  list-style-type: none;
+  position: fixed;
+  top: 0;
+  max-width: 50%;
+  width: 15.625rem; //250px
+  height: 100%;
+  background: rgb(40,40,40);
+  transition-duration: $animation-duration;
+  z-index: map-get($zindex, nav );
+  .active {
+    @include trans3d(!important);
+  }
+   > li:first-child{
+      position: fixed;
+      top: 0;
+      height: 3rem;
+      width: 3rem;
+      &:active, &:focus, &:hover {
+         background-color: rgba(255, 255, 255, 0.5) !important; 
+      }
+  }
+  // .wmapp-menu.menu-left
+  &.menu-left {
+      left: 0;
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    @include trans3d(null, -100%);
+     > li:first-child {
+        left: 15.625rem; //250px
+        background: url("../../../img/hamburger.svg") no-repeat center center;
+        background-size: 100%;
+    }
+    li {
+      a{
+        text-align: left;
+      }
+      &.has-dropdown {
+         > a {
+          &:after {
+              content: ' ';
+              display: block;
+              height: 1.5rem; //24px
+              width: 1.5rem; //24px
+              background: url("../../../img/right.svg") no-repeat center right;
+              background-size: auto 60%;
+              float: right;
+          }
+        }
+      }
+    }
+       .dropdown {
+      left: 15.625rem;
+    }
+    > .has-dropdown {
+      > .dropdown {
+        > .has-dropdown {
+          > .dropdown { //TO BE REVISED
+              left: 18.75rem;
+          }
+        }
+      }
+    }
+  }
+  &.menu-right {
+    right: 0;
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    @include trans3d(null, 100%);
+    > li{
+      &:first-child {
+          right: 15rem; //250px
+          background: url("../../../img/grid.svg") no-repeat center center;
+          background-size: 100%;
+      }
+    }
+    li {
+      a {
+        text-align: right;
+      }
+      &.has-dropdown {
+        > a{
+          &:after{
+              content: ' ';
+              display: block;
+              height: 1.5rem; //24px
+              width: 1.5rem; //24px
+              background: url("../../../img/left.svg") no-repeat center left;
+              background-size: auto 60%;
+              float: left;
+          }
+        }
+      }
+    }
+    .dropdown {
+      right: 15.625rem;
+    }
+    .has-dropdown{
+      &:hover {
+        > .dropdown{
+            height: 75vh;
+            max-height: 75vh;
+            overflow-y: auto;
+            overflow-x: hidden;
+            padding-right: 0.625rem;
+        }
+        .dropdown {
+          > li {
+            border-left: 1px solid rgba(255, 255, 255, 0.3);
+          }
+        }
+      }
+    }
+  }
+  li {
+    a{
+      border-top: 1px solid rgba(255, 255, 255, 0.3);
+      color: $white;
+      display: block;
+      box-sizing: border-box;
+      padding: 0.625rem;
+      min-height: 3rem; 
+      &:hover {
+        background: rgba(255, 255, 255, 0.1);
+      }
+    }
+  }
+  ul{
+    padding: 0;
+    margin: 0;
+  }
+  .dropdown {
+    position: fixed;
+    margin-top: -3rem;
+    width: 0;
+    @include trans3d;
+    > li {
+        opacity: 0;
+        transition: opacity 300ms;
+        display: block;
+        width: 0;
+        overflow: hidden;
+        background: rgb(40,40,40);
+    }
+  }
+  .has-dropdown{
+    &:hover {
+      > .dropdown {
+        width: 18.75rem;
+        div {
+          > a {
+            padding-right: 1.875rem;
+          }
+        }
+        > li{
+            opacity: 1;
+            width: 18.75rem;
+            font-size: $base-font-size * 0.75;
+            line-height: 1.5;
+            overflow: visible;
+            background-size: auto 90%;
+            background-repeat: no-repeat;
+            background-position: center left;
+            border-right: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        > .has-dropdown{
+          &:hover{
+            .dropdown {
+                height: 75vh;
+                max-height: 75vh;
+                overflow-y: auto;
+                overflow-x: hidden;
+                padding-right: 0.625rem;
+            }
+          } 
+        }
+      }
+    }
+  }
+}

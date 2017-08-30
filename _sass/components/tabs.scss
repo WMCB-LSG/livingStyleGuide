@@ -1,0 +1,181 @@
+dl {
+    &.tabs {
+        border-bottom: none;
+        text-align: center;
+
+        dd {
+            margin-left: 0.25rem;
+            border: none;
+            border-bottom: 1px solid $white;
+            margin-bottom: -1px !important;
+            display: inline-block;
+
+            &.active {
+                margin-left: 0.25rem;
+                border-bottom: 1px solid $grey;
+            }
+
+            a {
+                background-color: $white;
+                font-weight: 400;
+            }
+        }
+
+        &.vertical {
+            border-right: none;
+            text-align: center;
+
+            dd {
+                margin-left: 0.25rem;
+                border: none;
+                border-right: 1px solid $white;
+                margin-right: -1px !important;
+                display: inline-block;
+
+                &.active {
+                    margin-left: 0.25rem;
+                    border-right: 1px solid $grey;
+                }
+            }
+        }
+    }
+}
+
+.tabs {
+    &.vertical {
+        max-width: 25%;
+        width: 25%;
+        float: left;
+        margin: 0 0 1.25rem;
+
+        dd {
+            > a {
+                padding: 0.25rem;
+            }
+        }
+
+        .tab-title {
+            > a {
+                padding: 0.25rem;
+            }
+        }
+    }
+
+    dd {
+        a {
+            &.error {
+                color: $orange;
+            }
+        }
+    }
+}
+
+.tabs-content {
+    padding-left: 0.625rem;
+
+    &.vertical {
+        padding-left: 0.625rem;
+        width: 75%;
+        max-width: 75%;
+        float: left;
+        margin-left: -1px;
+        padding: 0.25rem;
+    }
+}
+
+.twirl-icon {
+    &:before {
+        font-family: FontAwesome;
+        content: "\f105";
+        font-size: 1.0rem;
+        padding-right: 0.5rem;
+    }
+}
+
+.active {
+    &.twirl-icon {
+        &:before {
+            font-family: FontAwesome;
+            content: "\f107";
+        }
+    }
+}
+
+.tabs {
+    .tab-title {
+        > a {
+            &.twirl-icon {
+                padding-left: 0;
+                background-color: transparent;
+            }
+        }
+    }
+}
+
+dl {
+    .tabs {
+        dd {
+            margin-left: 0.25rem;
+            border: 1px solid $grey;
+            border-bottom: 0;
+        }
+    }
+}
+
+// Mobile Styles
+
+.tabpanel {
+	min-height: 100%;
+}
+
+
+.wmapp-tabs {
+    @include flexbox;
+    @include flex-direction;
+	flex-direction: column;
+	height: 100%;
+
+	.wmapp-tabs-tabs > div {
+		@include flexbox;
+		background: $secondary;
+	}
+	.wmapp-tabs-tabs-tab {
+		text-align: center;
+		padding: 0.625rem;
+		box-sizing: border-box;
+
+		@include media-query-height($maxIphone5) {
+			padding: 0.25rem;
+		}
+
+		> img {
+			display: block;
+			margin: 0 auto 0.625rem auto;
+			max-height: 2.5rem;
+		}
+
+		&.active {
+			background: $accent;
+		}
+	}
+
+	.wmapp-tabs-views {
+		height: 100%;
+		overflow: auto;
+
+		> div {
+			height: 100%;
+		}
+
+		.no-padding {
+			margin-left: 0;
+		}
+	}
+}
+
+.padding .wmapp-tabs {
+	width: 100vw;
+	margin-left: -1.25rem;
+	margin-top: -1.25rem;
+	height: 100%
+}

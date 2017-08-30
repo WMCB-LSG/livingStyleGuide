@@ -1,0 +1,145 @@
+$project-name: safework;
+
+.wmapp-#{$project-name}-site-list-search {
+    width:100%;
+    > div {
+        > div {
+            @include flexbox;
+            @include flex-wrap(wrap);
+            .wmapp-search{
+                width:100%;
+                @include flexbox;
+                @include align-items(center);
+                @include justify-content(flex-end);
+                div[class^="wmapp-safework-site-search"] { 
+                    margin:0 0.5rem;
+                    min-width:6rem;
+                }
+            }
+        }
+    }
+}
+
+
+ ##{$project-name}SiteSelect, ##{$project-name}SiteSearch {
+    min-width:6rem;
+    margin-bottom:0;
+ }
+
+.wmapp-show-search-button{
+    @include border(1px, $blue);
+    background: transparent;
+    color:$blue;
+}
+
+.search-box {
+    @include flexbox;
+    @include align-items(center);
+    @include border(1px, rgba(0,0,0,0.24));
+    // margin:0 0.5rem;
+    div[class^="wmapp-#{$project-name}-site-search"] { 
+        min-width:6rem;
+        div {
+        input, select{
+            margin-bottom:0;
+            }
+        }
+    } 
+}
+
+#search-view {
+    width:100%;
+    > div{
+        width:100%;
+        @include flexbox;
+        @include justify-content(space-between);
+    }
+
+    .search-area {
+        width:32rem;
+        margin-left:auto;
+        @include flexbox;
+        @include align-items(center);
+        .search-box{
+            // margin:0 0.5rem;
+            @include border(1px, lightgrey);
+            height:2.25rem;
+            @include flexbox;
+            @include align-items(center);
+            .wmapp-safework-site-search-filter-select{
+                width:5rem;
+                label{
+                    margin:0;
+                }
+                select {
+                    background-color:rgba(0,0,0,0.06);
+                    color:rgba(0,0,0,0.48);
+                    @include border(0);
+                    margin:0;
+                }
+    
+            }
+            .wmapp-safework-site-search-filter-search {
+                input{
+                    
+                }
+            }
+            label {
+                @include flexbox;
+                select{
+                    width:6rem;
+                }
+                input{
+                    margin-bottom:0;
+                }
+            }
+            & + .wmapp-button-search {
+                @include border(1px, lightgrey);
+                border-left-width:0px;
+                @include border-radius(0);
+            }
+        }
+    }
+}
+
+.wmapp-search {
+    flex-wrap: wrap;
+    position: absolute;
+    top: 5.5rem;
+    right: 2rem;
+    z-index: map-get($zindex, nav );
+    background-color: $white;
+    @include boxShadow(4px);
+    // padding: 1rem;
+    width: 32rem;
+}
+
+.advanced-search {
+    &-title, &-form {
+        width:100%;
+    }
+    &-title {
+        background-color:whitesmoke;
+        padding:0.25rem 1rem;
+        h6{
+         color:$primary-color-accent; 
+        }
+        
+    }
+    &-form {
+        padding:1rem;
+        @include flexbox;
+        @include flex-wrap;
+        div[class^="wmapp-#{$project-name}-site-search"] {
+            width:46%;
+            margin:1rem 0.5rem;
+        }
+        .button-group{
+            @include align-self(flex-end);
+            @include justify-content(flex-end);
+            text-align:right;
+            width:100%;
+            margin-right:0;
+        }
+    }
+}

@@ -1,0 +1,42 @@
+ul {
+    &.wmapp-inline-list {
+        margin-top: 1.25rem;
+        list-style-type: none;
+
+        li {
+            display: table-cell;
+            float: left;
+            padding-right: 0.625rem;
+            vertical-align: middle;
+
+            div {
+                display: inline-block;
+
+                a {
+
+                }
+            }
+        }
+    }
+}
+
+.wmapp-inline-list-item-icon-circular {
+    width: 6.25rem;
+    height: 6.25rem;
+    @include border-radius(3rem);
+    padding: 0.25rem;
+    border: 0.25rem solid $white;
+    box-shadow: 0 0 0.25rem $orange;
+}
+
+.wmapp-inline-list-item-label {
+    color: $grey;
+}
+
+.wmapp-user-image-small {
+    width: 2.5rem;
+    height: 2.5rem;
+    @include border-radius(1.25rem);
+    display: inline-block;
+    vertical-align: middle;
+}

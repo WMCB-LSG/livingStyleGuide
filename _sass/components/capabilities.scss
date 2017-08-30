@@ -1,0 +1,20 @@
+.wmapp-capabilities {
+    width: calc(100% + 1.25rem);
+    margin-left: -0.625rem;
+}
+
+a {
+    &.wmapp-entity-associations-collection-item {
+        color: inherit;
+        background-image: url("../img/forward.svg");
+        background-repeat: no-repeat;
+        background-size: auto 50%;
+        background-position: center right;
+        padding: 0.625rem 2rem 0.625rem 0;
+
+        &.activated {
+            background-color: $blue-light;
+            border-radius:0.25rem;
+        }
+    }
+}

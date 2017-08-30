@@ -1,0 +1,21 @@
+.wmapp-eula-wrapper {
+	padding: 1.25rem;
+	@include border-radius;
+
+	> h3,
+	> p {
+		margin: 0;
+	}
+	.button-group {
+		text-align: center;
+
+		button {
+			display: inline-block;
+			float: none;
+			margin: 0 0.625rem;
+		}
+	}
+	.wmapp-eula {
+		margin: 1.25rem 0;
+	}
+}

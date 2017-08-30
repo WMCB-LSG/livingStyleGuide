@@ -1,0 +1,37 @@
+
+.facebook-login,
+.facebook-share {
+	height: 3rem;
+	padding-left: 3rem;
+	padding-right: 0.25rem;
+	position: relative;
+	background: $facebook;
+	background: linear-gradient($facebook, $facebook-hover);
+	border-color: $facebook;
+	border-radius: 0.125rem;
+	color: $white;
+	-webkit-font-smoothing: antialiased;
+	text-shadow: 0 -1px 0 $facebook-hover;
+	font-size: 1.125rem;
+	line-height: 3.125rem;
+	text-align: center;
+	margin: 1.25rem auto 0 auto;
+	max-width: 25rem;
+	cursor: pointer;
+	&:after{
+		content: ' ';
+		background: url(/img/facebook.svg) no-repeat;
+		background-size: contain;
+		position: absolute;
+		left: 0.25rem;
+		top: 0.25rem;
+		width: 2.5rem;
+		height: 2.5rem;
+	}
+}
+
+// Mobile Style 
+
+.facebook-login:after {
+	background: url(../img/facebook.svg) no-repeat;
+}

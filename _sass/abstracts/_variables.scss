@@ -18,6 +18,10 @@ $small-font-size: $base-font-size * 0.875; //14px
 $base-line-height: 1;
 $base-border-radius: $base-font-size / 4;
 
+$body-font-family:Open Sans, Helvetica, Arial, sans-serif !default;
+$heading-font-family:Montserrat, Helvetica, Arial, sans-serif;
+$source-font-family:Source Code Pro, monospace;
+
 
 // Native app Variables
 $animation-duration: 300ms;
